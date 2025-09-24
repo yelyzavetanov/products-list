@@ -1,7 +1,31 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
+// next config
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+  output: 'standalone',
+
+  poweredByHeader: false,
+  cacheMaxMemorySize: 100 * 1024 * 1024,
+
+  logging: {},
+
+  experimental: {
+    reactCompiler: true,
+    optimizeServerReact: true,
+    optimizePackageImports: [
+      'zod',
+      'luxon',
+      'react-hook-form',
+      'usehooks-ts',
+      '@heroui/react',
+      '@heroui/system',
+      'zustand',
+      'framer-motion',
+    ],
+    staticGenerationRetryCount: 1,
+    staticGenerationMaxConcurrency: 2,
+    staticGenerationMinPagesPerWorker: 25,
+  },
+}
 
 export default nextConfig;
