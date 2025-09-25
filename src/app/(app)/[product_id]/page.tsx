@@ -1,11 +1,7 @@
+import { ProductModule } from '@/app/modules/product'
 import { getQueryClient } from '@/pkg/libraries/rest-api/service'
 import { dehydrate, HydrationBoundary } from '@tanstack/react-query'
 import { FC } from 'react'
-import { HomeModule } from '../modules/home'
-
-// cache
-export const dynamic = 'force-static'
-export const revalidate = 120
 
 // interface
 interface IProps {}
@@ -17,7 +13,7 @@ const Page: FC<Readonly<IProps>> = () => {
   // return
   return (
     <HydrationBoundary state={dehydrate(clientQuery)}>
-      <HomeModule />
+      <ProductModule />
     </HydrationBoundary>
   )
 }

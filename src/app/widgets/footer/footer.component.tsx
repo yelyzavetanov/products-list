@@ -6,7 +6,7 @@ interface IProps {}
 // component
 const FooterComponent: FC<Readonly<IProps>> = () => {
   // return
-  return <footer>this is a footer</footer>
+  return <footer className='p-6 text-center'>this is a footer</footer>
 }
 
 export default FooterComponent

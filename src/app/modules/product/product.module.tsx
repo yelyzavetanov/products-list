@@ -5,9 +5,9 @@ import { FC } from 'react'
 interface IProps {}
 
 // component
-const HomeModule: FC<Readonly<IProps>> = () => {
+const ProductModule: FC<Readonly<IProps>> = () => {
   // return
-  return <ContainerComponent>home module</ContainerComponent>
+  return <ContainerComponent>product module</ContainerComponent>
 }
 
-export default HomeModule
+export default ProductModule
