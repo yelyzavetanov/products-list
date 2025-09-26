@@ -1,11 +1,14 @@
 'use client'
 
 import { productCategoryListOptions } from '@/app/entities/api'
-import { ICategorySelect } from '@/app/entities/models/product.model'
+import { ICategorySelect } from '@/app/entities/models/category.model'
 import { useCategoryStore } from '@/app/shared/store'
+
 import { Button } from '@heroui/button'
 import { Select, SelectItem } from '@heroui/select'
+
 import { useQuery } from '@tanstack/react-query'
+
 import { FC } from 'react'
 import { Controller, useForm } from 'react-hook-form'
 
@@ -57,9 +60,11 @@ const CategoriesBlockComponent: FC<Readonly<IProps>> = () => {
           </Select>
         )}
       />
+
       <Button color='primary' type='submit' className='mt-2'>
         Find
       </Button>
+
       <Button
         className='m-2'
         color='primary'

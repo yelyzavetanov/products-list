@@ -9,7 +9,6 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@heroui/image": "^2.2.16",
     "@heroui/react": "^2.8.1",
     "@playwright/test": "^1.55.1",
     "@tanstack/react-query": "^5.90.2",
@@ -17,7 +16,6 @@
     "babel-plugin-react-compiler": "^19.1.0-rc.2",
     "framer-motion": "^12.23.22",
     "next": "15.5.4",
-    "pino": "^9.11.0",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-hook-form": "^7.60.0",

@@ -28,11 +28,3 @@ export interface IProductByIdQueryParams {
 export interface IProductRes {
   products: IProduct[]
 }
-
-// categories response
-export type ICategoriesRes = string[]
-
-// category select
-export interface ICategorySelect {
-  category: string
-}

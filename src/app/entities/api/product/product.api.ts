@@ -1,12 +1,6 @@
 import { QueryFunctionContext } from '@tanstack/react-query'
 import { notFound } from 'next/navigation'
-import {
-  ICategoriesRes,
-  IProduct,
-  IProductByIdQueryParams,
-  IProductQueryParams,
-  IProductRes,
-} from '../../models/product.model'
+import { ICategoriesRes, IProduct, IProductByIdQueryParams, IProductQueryParams, IProductRes } from '../../models'
 
 // api
 export const productsQueryApi = async (opt: QueryFunctionContext, queryParams: IProductQueryParams) => {
@@ -33,8 +27,8 @@ export const productByIdQueryApi = async (opt: QueryFunctionContext, queryParams
 
   const res = await fetch(`https://dummyjson.com/products/${id}`, {
     signal: opt.signal,
-    cache: 'no-store',
-    // next: { revalidate: 30 },
+    cache: 'force-cache',
+    next: { revalidate: 30 },
   })
 
   if (!res) {

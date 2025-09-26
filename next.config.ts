@@ -1,4 +1,4 @@
-import type { NextConfig } from 'next';
+import type { NextConfig } from 'next'
 
 // next config
 const nextConfig: NextConfig = {
@@ -19,6 +19,11 @@ const nextConfig: NextConfig = {
       'usehooks-ts',
       '@heroui/react',
       '@heroui/system',
+      '@heroui/button',
+      '@heroui/card',
+      '@heroui/navbar',
+      '@heroui/select',
+      '@heroui/skeleton',
       'zustand',
       'framer-motion',
     ],
@@ -28,4 +33,4 @@ const nextConfig: NextConfig = {
   },
 }
 
-export default nextConfig;
+export default nextConfig

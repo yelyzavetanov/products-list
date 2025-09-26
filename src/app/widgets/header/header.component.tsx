@@ -1,8 +1,9 @@
 'use client'
 
-import { Navbar } from '@heroui/navbar'
 import Link from 'next/link'
 import { FC } from 'react'
+
+import { Navbar } from '@heroui/navbar'
 
 // interface
 interface IProps {}
@@ -14,6 +15,7 @@ const HeaderComponent: FC<Readonly<IProps>> = () => {
     <header>
       <Navbar>
         <div className='text-gray-600'>A simple product list project</div>
+
         <Link color='primary' href={'/'}>
           Home
         </Link>

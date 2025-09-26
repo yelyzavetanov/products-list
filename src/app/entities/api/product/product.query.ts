@@ -1,5 +1,5 @@
 import { queryOptions } from '@tanstack/react-query'
-import { IProductByIdQueryParams, IProductQueryParams } from '../../models/product.model'
+import { IProductByIdQueryParams, IProductQueryParams } from '../../models'
 import { productByIdQueryApi, productCategoryListApi, productsQueryApi } from './product.api'
 
 // options
