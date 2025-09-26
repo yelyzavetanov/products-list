@@ -5,7 +5,7 @@ import { HomeModule } from '../modules/home'
 
 // cache
 export const dynamic = 'force-static'
-export const revalidate = 120
+export const revalidate = 30
 
 // interface
 interface IProps {}

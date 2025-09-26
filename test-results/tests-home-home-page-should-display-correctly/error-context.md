@@ -1,0 +1,202 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - navigation [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]: A simple product list project
+        - link "Home" [ref=e7] [cursor=pointer]:
+          - /url: /
+  - main [ref=e8]:
+    - generic [ref=e9]:
+      - generic [ref=e10]:
+        - combobox [ref=e13]
+        - button "Select category Select category" [ref=e15]:
+          - generic [ref=e17]: Select category
+          - img [ref=e18]
+      - button "Find" [ref=e20] [cursor=pointer]
+      - button "Reset" [ref=e21] [cursor=pointer]
+    - generic [ref=e22]:
+      - link "beauty Card background" [ref=e23] [cursor=pointer]:
+        - /url: /1
+        - button "beauty Card background" [ref=e24] [cursor=pointer]:
+          - generic [ref=e25] [cursor=pointer]:
+            - paragraph [ref=e27] [cursor=pointer]: beauty
+            - img "Card background" [ref=e28] [cursor=pointer]
+      - link "beauty Card background" [ref=e29] [cursor=pointer]:
+        - /url: /2
+        - button "beauty Card background" [ref=e30] [cursor=pointer]:
+          - generic [ref=e31] [cursor=pointer]:
+            - paragraph [ref=e33] [cursor=pointer]: beauty
+            - img "Card background" [ref=e34] [cursor=pointer]
+      - link "beauty Card background" [ref=e35] [cursor=pointer]:
+        - /url: /3
+        - button "beauty Card background" [ref=e36] [cursor=pointer]:
+          - generic [ref=e37] [cursor=pointer]:
+            - paragraph [ref=e39] [cursor=pointer]: beauty
+            - img "Card background" [ref=e40] [cursor=pointer]
+      - link "beauty Card background" [ref=e41] [cursor=pointer]:
+        - /url: /4
+        - button "beauty Card background" [ref=e42] [cursor=pointer]:
+          - generic [ref=e43] [cursor=pointer]:
+            - paragraph [ref=e45] [cursor=pointer]: beauty
+            - img "Card background" [ref=e46] [cursor=pointer]
+      - link "beauty Card background" [ref=e47] [cursor=pointer]:
+        - /url: /5
+        - button "beauty Card background" [ref=e48] [cursor=pointer]:
+          - generic [ref=e49] [cursor=pointer]:
+            - paragraph [ref=e51] [cursor=pointer]: beauty
+            - img "Card background" [ref=e52] [cursor=pointer]
+      - link "fragrances Card background" [ref=e53] [cursor=pointer]:
+        - /url: /6
+        - button "fragrances Card background" [ref=e54] [cursor=pointer]:
+          - generic [ref=e55] [cursor=pointer]:
+            - paragraph [ref=e57] [cursor=pointer]: fragrances
+            - img "Card background" [ref=e58] [cursor=pointer]
+      - link "fragrances Card background" [ref=e59] [cursor=pointer]:
+        - /url: /7
+        - button "fragrances Card background" [ref=e60] [cursor=pointer]:
+          - generic [ref=e61] [cursor=pointer]:
+            - paragraph [ref=e63] [cursor=pointer]: fragrances
+            - img "Card background" [ref=e64] [cursor=pointer]
+      - link "fragrances Card background" [ref=e65] [cursor=pointer]:
+        - /url: /8
+        - button "fragrances Card background" [ref=e66] [cursor=pointer]:
+          - generic [ref=e67] [cursor=pointer]:
+            - paragraph [ref=e69] [cursor=pointer]: fragrances
+            - img "Card background" [ref=e70] [cursor=pointer]
+      - link "fragrances Card background" [ref=e71] [cursor=pointer]:
+        - /url: /9
+        - button "fragrances Card background" [ref=e72] [cursor=pointer]:
+          - generic [ref=e73] [cursor=pointer]:
+            - paragraph [ref=e75] [cursor=pointer]: fragrances
+            - img "Card background" [ref=e76] [cursor=pointer]
+      - link "fragrances Card background" [ref=e77] [cursor=pointer]:
+        - /url: /10
+        - button "fragrances Card background" [ref=e78] [cursor=pointer]:
+          - generic [ref=e79] [cursor=pointer]:
+            - paragraph [ref=e81] [cursor=pointer]: fragrances
+            - img "Card background" [ref=e82] [cursor=pointer]
+      - link "furniture Card background" [ref=e83] [cursor=pointer]:
+        - /url: /11
+        - button "furniture Card background" [ref=e84] [cursor=pointer]:
+          - generic [ref=e85] [cursor=pointer]:
+            - paragraph [ref=e87] [cursor=pointer]: furniture
+            - img "Card background" [ref=e88] [cursor=pointer]
+      - link "furniture Card background" [ref=e89] [cursor=pointer]:
+        - /url: /12
+        - button "furniture Card background" [ref=e90] [cursor=pointer]:
+          - generic [ref=e91] [cursor=pointer]:
+            - paragraph [ref=e93] [cursor=pointer]: furniture
+            - img "Card background" [ref=e94] [cursor=pointer]
+      - link "furniture Card background" [ref=e95] [cursor=pointer]:
+        - /url: /13
+        - button "furniture Card background" [ref=e96] [cursor=pointer]:
+          - generic [ref=e97] [cursor=pointer]:
+            - paragraph [ref=e99] [cursor=pointer]: furniture
+            - img "Card background" [ref=e100] [cursor=pointer]
+      - link "furniture Card background" [ref=e101] [cursor=pointer]:
+        - /url: /14
+        - button "furniture Card background" [ref=e102] [cursor=pointer]:
+          - generic [ref=e103] [cursor=pointer]:
+            - paragraph [ref=e105] [cursor=pointer]: furniture
+            - img "Card background" [ref=e106] [cursor=pointer]
+      - link "furniture Card background" [ref=e107] [cursor=pointer]:
+        - /url: /15
+        - button "furniture Card background" [ref=e108] [cursor=pointer]:
+          - generic [ref=e109] [cursor=pointer]:
+            - paragraph [ref=e111] [cursor=pointer]: furniture
+            - img "Card background" [ref=e112] [cursor=pointer]
+      - link "groceries Card background" [ref=e113] [cursor=pointer]:
+        - /url: /16
+        - button "groceries Card background" [ref=e114] [cursor=pointer]:
+          - generic [ref=e115] [cursor=pointer]:
+            - paragraph [ref=e117] [cursor=pointer]: groceries
+            - img "Card background" [ref=e118] [cursor=pointer]
+      - link "groceries Card background" [ref=e119] [cursor=pointer]:
+        - /url: /17
+        - button "groceries Card background" [ref=e120] [cursor=pointer]:
+          - generic [ref=e121] [cursor=pointer]:
+            - paragraph [ref=e123] [cursor=pointer]: groceries
+            - img "Card background" [ref=e124] [cursor=pointer]
+      - link "groceries Card background" [ref=e125] [cursor=pointer]:
+        - /url: /18
+        - button "groceries Card background" [ref=e126] [cursor=pointer]:
+          - generic [ref=e127] [cursor=pointer]:
+            - paragraph [ref=e129] [cursor=pointer]: groceries
+            - img "Card background" [ref=e130] [cursor=pointer]
+      - link "groceries Card background" [ref=e131] [cursor=pointer]:
+        - /url: /19
+        - button "groceries Card background" [ref=e132] [cursor=pointer]:
+          - generic [ref=e133] [cursor=pointer]:
+            - paragraph [ref=e135] [cursor=pointer]: groceries
+            - img "Card background" [ref=e136] [cursor=pointer]
+      - link "groceries Card background" [ref=e137] [cursor=pointer]:
+        - /url: /20
+        - button "groceries Card background" [ref=e138] [cursor=pointer]:
+          - generic [ref=e139] [cursor=pointer]:
+            - paragraph [ref=e141] [cursor=pointer]: groceries
+            - img "Card background" [ref=e142] [cursor=pointer]
+      - link "groceries Card background" [ref=e143] [cursor=pointer]:
+        - /url: /21
+        - button "groceries Card background" [ref=e144] [cursor=pointer]:
+          - generic [ref=e145] [cursor=pointer]:
+            - paragraph [ref=e147] [cursor=pointer]: groceries
+            - img "Card background" [ref=e148] [cursor=pointer]
+      - link "groceries Card background" [ref=e149] [cursor=pointer]:
+        - /url: /22
+        - button "groceries Card background" [ref=e150] [cursor=pointer]:
+          - generic [ref=e151] [cursor=pointer]:
+            - paragraph [ref=e153] [cursor=pointer]: groceries
+            - img "Card background" [ref=e154] [cursor=pointer]
+      - link "groceries Card background" [ref=e155] [cursor=pointer]:
+        - /url: /23
+        - button "groceries Card background" [ref=e156] [cursor=pointer]:
+          - generic [ref=e157] [cursor=pointer]:
+            - paragraph [ref=e159] [cursor=pointer]: groceries
+            - img "Card background" [ref=e160] [cursor=pointer]
+      - link "groceries Card background" [ref=e161] [cursor=pointer]:
+        - /url: /24
+        - button "groceries Card background" [ref=e162] [cursor=pointer]:
+          - generic [ref=e163] [cursor=pointer]:
+            - paragraph [ref=e165] [cursor=pointer]: groceries
+            - img "Card background" [ref=e166] [cursor=pointer]
+      - link "groceries Card background" [ref=e167] [cursor=pointer]:
+        - /url: /25
+        - button "groceries Card background" [ref=e168] [cursor=pointer]:
+          - generic [ref=e169] [cursor=pointer]:
+            - paragraph [ref=e171] [cursor=pointer]: groceries
+            - img "Card background" [ref=e172] [cursor=pointer]
+      - link "groceries Card background" [ref=e173] [cursor=pointer]:
+        - /url: /26
+        - button "groceries Card background" [ref=e174] [cursor=pointer]:
+          - generic [ref=e175] [cursor=pointer]:
+            - paragraph [ref=e177] [cursor=pointer]: groceries
+            - img "Card background" [ref=e178] [cursor=pointer]
+      - link "groceries Card background" [ref=e179] [cursor=pointer]:
+        - /url: /27
+        - button "groceries Card background" [ref=e180] [cursor=pointer]:
+          - generic [ref=e181] [cursor=pointer]:
+            - paragraph [ref=e183] [cursor=pointer]: groceries
+            - img "Card background" [ref=e184] [cursor=pointer]
+      - link "groceries Card background" [ref=e185] [cursor=pointer]:
+        - /url: /28
+        - button "groceries Card background" [ref=e186] [cursor=pointer]:
+          - generic [ref=e187] [cursor=pointer]:
+            - paragraph [ref=e189] [cursor=pointer]: groceries
+            - img "Card background" [ref=e190] [cursor=pointer]
+      - link "groceries Card background" [ref=e191] [cursor=pointer]:
+        - /url: /29
+        - button "groceries Card background" [ref=e192] [cursor=pointer]:
+          - generic [ref=e193] [cursor=pointer]:
+            - paragraph [ref=e195] [cursor=pointer]: groceries
+            - img "Card background" [ref=e196] [cursor=pointer]
+      - link "groceries Card background" [ref=e197] [cursor=pointer]:
+        - /url: /30
+        - button "groceries Card background" [ref=e198] [cursor=pointer]:
+          - generic [ref=e199] [cursor=pointer]:
+            - paragraph [ref=e201] [cursor=pointer]: groceries
+            - img "Card background" [ref=e202] [cursor=pointer]
+  - contentinfo [ref=e203]: this is a footer
+```

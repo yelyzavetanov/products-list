@@ -1,13 +1,23 @@
+import { IProduct } from '@/app/entities/models/product.model'
+import { ProductBlockComponent } from '@/app/features/block/product-block'
 import { ContainerComponent } from '@/app/shared/ui/container'
 import { FC } from 'react'
 
 // interface
-interface IProps {}
+interface IProps {
+  data: IProduct
+}
 
 // component
-const ProductModule: FC<Readonly<IProps>> = () => {
+const ProductModule: FC<Readonly<IProps>> = (props) => {
+  const { data } = props
+
   // return
-  return <ContainerComponent>product module</ContainerComponent>
+  return (
+    <ContainerComponent className='justify-center'>
+      <ProductBlockComponent product={data} />
+    </ContainerComponent>
+  )
 }
 
 export default ProductModule

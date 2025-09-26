@@ -16,7 +16,7 @@ export interface IProduct {
 
 // query params
 export interface IProductQueryParams {
-  category?: string
+  category?: string | null
 }
 
 // query params
@@ -30,9 +30,7 @@ export interface IProductRes {
 }
 
 // categories response
-export interface ICategoriesRes {
-  categories: string[]
-}
+export type ICategoriesRes = string[]
 
 // category select
 export interface ICategorySelect {

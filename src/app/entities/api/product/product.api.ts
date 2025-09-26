@@ -15,7 +15,7 @@ export const productsQueryApi = async (opt: QueryFunctionContext, queryParams: I
   const res = await fetch(`https://dummyjson.com/products/${category ? `category/${category}` : ''}`, {
     signal: opt.signal,
     cache: 'force-cache',
-    next: { revalidate: 360 },
+    next: { revalidate: 30 },
   })
 
   if (!res) {
@@ -33,8 +33,8 @@ export const productByIdQueryApi = async (opt: QueryFunctionContext, queryParams
 
   const res = await fetch(`https://dummyjson.com/products/${id}`, {
     signal: opt.signal,
-    cache: 'force-cache',
-    next: { revalidate: 360 },
+    cache: 'no-store',
+    // next: { revalidate: 30 },
   })
 
   if (!res) {
@@ -51,7 +51,7 @@ export const productCategoryListApi = async (opt: QueryFunctionContext) => {
   const res = await fetch(`https://dummyjson.com/products/category-list`, {
     signal: opt.signal,
     cache: 'force-cache',
-    next: { revalidate: 360 },
+    next: { revalidate: 30 },
   })
 
   if (!res) {

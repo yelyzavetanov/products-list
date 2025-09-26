@@ -1,13 +1,13 @@
 import { queryOptions } from '@tanstack/react-query'
 import { IProductByIdQueryParams, IProductQueryParams } from '../../models/product.model'
-import { productByIdQueryApi, productsQueryApi } from './product.api'
+import { productByIdQueryApi, productCategoryListApi, productsQueryApi } from './product.api'
 
 // options
 export const productsQueryOptions = (queryParams: IProductQueryParams) => {
   const { category = '' } = queryParams
 
   return queryOptions({
-    queryKey: ['products'],
+    queryKey: ['products', category],
     queryFn: (params) => productsQueryApi(params, queryParams),
   })
 }
@@ -19,5 +19,13 @@ export const productByIdQueryOptions = (queryParams: IProductByIdQueryParams) =>
   return queryOptions({
     queryKey: ['product', id],
     queryFn: (params) => productByIdQueryApi(params, queryParams),
+  })
+}
+
+// options
+export const productCategoryListOptions = () => {
+  return queryOptions({
+    queryKey: ['categories'],
+    queryFn: (params) => productCategoryListApi(params),
   })
 }

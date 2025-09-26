@@ -253,7 +253,7 @@
     "@react-aria/focus" "3.21.1"
     "@react-types/breadcrumbs" "3.7.16"
 
-"@heroui/button@2.2.26", "@heroui/button@^2.2.26":
+"@heroui/button@2.2.26":
   version "2.2.26"
   resolved "https://registry.yarnpkg.com/@heroui/button/-/button-2.2.26.tgz#4baab803423810faebcd6e90f6bfba18b45ee8cb"
   integrity sha512-Z4Kp7M444pgzKCUDTZX8Q5GnxOxqIJnAB58+8g5ETlA++Na+qqXwAXADmAPIrBB7uqoRUrsP7U/bpp5SiZYJ2A==
@@ -292,7 +292,7 @@
     "@react-types/shared" "3.32.0"
     scroll-into-view-if-needed "3.0.10"
 
-"@heroui/card@2.2.24", "@heroui/card@^2.2.24":
+"@heroui/card@2.2.24":
   version "2.2.24"
   resolved "https://registry.yarnpkg.com/@heroui/card/-/card-2.2.24.tgz#2ce1a641d65ea42fcb5bc7a8dab5852f205e244b"
   integrity sha512-kv4xLJTNYSar3YjiziA71VSZbco0AQUiZAuyP9rZ8XSht8HxLQsVpM6ywFa+/SGTGAh5sIv0qCYCpm0m4BrSxw==
@@ -380,7 +380,7 @@
     "@react-types/datepicker" "3.13.1"
     "@react-types/shared" "3.32.0"
 
-"@heroui/divider@2.2.19", "@heroui/divider@^2.2.19":
+"@heroui/divider@2.2.19":
   version "2.2.19"
   resolved "https://registry.yarnpkg.com/@heroui/divider/-/divider-2.2.19.tgz#e3b289f56c2abfe7ce36457b12469d6495538679"
   integrity sha512-FHoXojco23o/A9GJU6K2iJ3uAvcV7AJ4ppAKIGaKS4weJnYOsh5f9NE2RL3NasmIjk3DLMERDjVVuPyDdJ+rpw==
@@ -491,7 +491,7 @@
     "@heroui/shared-utils" "2.1.11"
     "@heroui/system-rsc" "2.3.19"
 
-"@heroui/link@2.2.22", "@heroui/link@^2.2.22":
+"@heroui/link@2.2.22":
   version "2.2.22"
   resolved "https://registry.yarnpkg.com/@heroui/link/-/link-2.2.22.tgz#2fc3a284bbf02cd073474c1abf9d94af4eebf8e8"
   integrity sha512-INWjrLwlxSU5hN0qr1lCZ1GN9Tf3X8WMTUQnPmvbqbJkPgQjqfIcO2dJyUkV3X0PiSB9QbPMlfU4Sx+loFKq4g==
@@ -557,7 +557,7 @@
     "@react-aria/overlays" "3.29.0"
     "@react-stately/overlays" "3.6.19"
 
-"@heroui/navbar@2.2.24", "@heroui/navbar@^2.2.24":
+"@heroui/navbar@2.2.24":
   version "2.2.24"
   resolved "https://registry.yarnpkg.com/@heroui/navbar/-/navbar-2.2.24.tgz#4b908426b781d0977e87b73cdb6450e5465fd57d"
   integrity sha512-fRnHJR4QbANeTCVVg+VmvItSv51rYvkcvx4YrHYmUa8X3kWy5X+0dARqtLxuXv76Uc12+w23gb5T4eXQIBL+oQ==
@@ -744,7 +744,7 @@
     "@heroui/shared-utils" "2.1.11"
     "@heroui/use-data-scroll-overflow" "2.2.12"
 
-"@heroui/select@2.4.27", "@heroui/select@^2.4.27":
+"@heroui/select@2.4.27":
   version "2.4.27"
   resolved "https://registry.yarnpkg.com/@heroui/select/-/select-2.4.27.tgz#8a1b696799f87115061af73b14e82f2044313f4a"
   integrity sha512-CgMqVWYWcdHNOnSeMMraXFBXFsToyxZ9sSwszG3YlhGwaaj0yZonquMYgl5vHCnFLkGXwggNczl+vdDErLEsbw==
@@ -779,7 +779,7 @@
   resolved "https://registry.yarnpkg.com/@heroui/shared-utils/-/shared-utils-2.1.11.tgz#0aedf0142c829ec4a41a47d827581ee503af2a87"
   integrity sha512-2zKVjCc9EMMk05peVpI1Q+vFf+dzqyVdf1DBCJ2SNQEUF7E+sRe1FvhHvPoye3TIFD/Fr6b3kZ6vzjxL9GxB6A==
 
-"@heroui/skeleton@2.2.16", "@heroui/skeleton@^2.2.16":
+"@heroui/skeleton@2.2.16":
   version "2.2.16"
   resolved "https://registry.yarnpkg.com/@heroui/skeleton/-/skeleton-2.2.16.tgz#8cec9733b94007c4ce22588822d3f91b88029c80"
   integrity sha512-rIerwmS5uiOpvJUT37iyuiXUJzesUE/HgSv4gH1tTxsrjgpkRRrgr/zANdbCd0wpSIi4PPNHWq51n0CMrQGUTg==
@@ -854,7 +854,7 @@
     "@react-types/shared" "3.32.0"
     clsx "^1.2.1"
 
-"@heroui/system@2.4.22", "@heroui/system@^2.4.22":
+"@heroui/system@2.4.22":
   version "2.4.22"
   resolved "https://registry.yarnpkg.com/@heroui/system/-/system-2.4.22.tgz#54d626550a49ec1acb9feb7bbd62b47c0192cdcf"
   integrity sha512-+RVuAxjS2QWyLdYTPxv0IfMjhsxa1GKRSwvpii13bOGEQclwwfaNL2MvBbTt1Mzu/LHaX7kyj0THbZnlOplZOA==
@@ -1447,6 +1447,13 @@
   version "0.2.9"
   resolved "https://registry.yarnpkg.com/@pkgr/core/-/core-0.2.9.tgz#d229a7b7f9dac167a156992ef23c7f023653f53b"
   integrity sha512-QNqXyfVS2wm9hweSYD2O7F0G06uurj9kZ96TRQE5Y9hU7+tgdZwIkbAKc5Ocy1HxEY2kuDQa6cQ1WRs/O5LFKA==
+
+"@playwright/test@^1.55.1":
+  version "1.55.1"
+  resolved "https://registry.yarnpkg.com/@playwright/test/-/test-1.55.1.tgz#80f775d5f948cd3ef550fcc45ef99986d3ffb36c"
+  integrity sha512-IVAh/nOJaw6W9g+RJVlIQJ6gSiER+ae6mKQ5CX1bERzQgbC1VSeBlwdvczT7pxb0GWiyrxH4TGKbMfDb4Sq/ig==
+  dependencies:
+    playwright "1.55.1"
 
 "@react-aria/breadcrumbs@3.5.28":
   version "3.5.28"
@@ -2977,7 +2984,7 @@ axobject-query@^4.1.0:
   resolved "https://registry.yarnpkg.com/axobject-query/-/axobject-query-4.1.0.tgz#28768c76d0e3cff21bc62a9e2d0b6ac30042a1ee"
   integrity sha512-qIj0G9wZbMGNLjLmg1PT6v2mE9AH2zlnADJD/2tC6E00hgmhUOfEB6greHPAfLRSufHqROIUTkw6E+M3lH0PTQ==
 
-babel-plugin-react-compiler@^19.1.0-rc.3:
+babel-plugin-react-compiler@^19.1.0-rc.2:
   version "19.1.0-rc.3"
   resolved "https://registry.yarnpkg.com/babel-plugin-react-compiler/-/babel-plugin-react-compiler-19.1.0-rc.3.tgz#45e5a282a2460b3701971e5eb8310a90a7919022"
   integrity sha512-mjRn69WuTz4adL0bXGx8Rsyk1086zFJeKmes6aK0xPuK3aaXmDJdLHqwKKMrpm6KAI1MCoUK72d2VeqQbu8YIA==
@@ -3711,14 +3718,19 @@ for-each@^0.3.3, for-each@^0.3.5:
   dependencies:
     is-callable "^1.2.7"
 
-framer-motion@^12.23.21:
-  version "12.23.21"
-  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-12.23.21.tgz#8e82b381c79fb843c844121455feba19847c0978"
-  integrity sha512-UWDtzzPdRA3UpSNGril5HjUtPF1Uo/BCt5VKG/YQ8tVpSkAZ22+q8o+hYO0C1uDAZuotQjcfzsTsDtQxD46E/Q==
+framer-motion@^12.23.22:
+  version "12.23.22"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-12.23.22.tgz#798333fdcc5cd65fabfc450985b7236bbdbf5d64"
+  integrity sha512-ZgGvdxXCw55ZYvhoZChTlG6pUuehecgvEAJz0BHoC5pQKW1EC5xf1Mul1ej5+ai+pVY0pylyFfdl45qnM1/GsA==
   dependencies:
     motion-dom "^12.23.21"
     motion-utils "^12.23.6"
     tslib "^2.4.0"
+
+fsevents@2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.2.tgz#8a526f78b8fdf4623b709e0b975c52c24c02fd1a"
+  integrity sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==
 
 function-bind@^1.1.2:
   version "1.1.2"
@@ -4573,6 +4585,20 @@ pino@^9.11.0:
     safe-stable-stringify "^2.3.1"
     sonic-boom "^4.0.1"
     thread-stream "^3.0.0"
+
+playwright-core@1.55.1:
+  version "1.55.1"
+  resolved "https://registry.yarnpkg.com/playwright-core/-/playwright-core-1.55.1.tgz#5d3bb1846bc4289d364ea1a9dcb33f14545802e9"
+  integrity sha512-Z6Mh9mkwX+zxSlHqdr5AOcJnfp+xUWLCt9uKV18fhzA8eyxUd8NUWzAjxUh55RZKSYwDGX0cfaySdhZJGMoJ+w==
+
+playwright@1.55.1:
+  version "1.55.1"
+  resolved "https://registry.yarnpkg.com/playwright/-/playwright-1.55.1.tgz#8a9954e9e61ed1ab479212af9be336888f8b3f0e"
+  integrity sha512-cJW4Xd/G3v5ovXtJJ52MAOclqeac9S/aGGgRzLabuF8TnIb6xHvMzKIa6JmrRzUkeXJgfL1MhukP0NK6l39h3A==
+  dependencies:
+    playwright-core "1.55.1"
+  optionalDependencies:
+    fsevents "2.3.2"
 
 possible-typed-array-names@^1.0.0:
   version "1.1.0"
