@@ -5,7 +5,6 @@ export default function manifest(): MetadataRoute.Manifest {
     name: 'Products List',
     short_name: 'Products List',
     description: 'Products List',
-    start_url: '/',
     display: 'standalone',
   }
 }

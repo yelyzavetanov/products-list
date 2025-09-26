@@ -3,7 +3,7 @@ import { FC } from 'react'
 import { Card } from '@heroui/card'
 import { Image } from '@heroui/image'
 
-import { IProduct } from '@/app/entities/models/product.model'
+import { IProduct } from '@/app/entities/models'
 
 // interface
 interface IProps {

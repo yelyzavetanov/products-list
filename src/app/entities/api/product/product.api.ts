@@ -1,6 +1,12 @@
+import {
+  ICategoriesRes,
+  IProduct,
+  IProductByIdQueryParams,
+  IProductQueryParams,
+  IProductRes,
+} from '@/app/entities/models'
 import { QueryFunctionContext } from '@tanstack/react-query'
 import { notFound } from 'next/navigation'
-import { ICategoriesRes, IProduct, IProductByIdQueryParams, IProductQueryParams, IProductRes } from '../../models'
 
 // api
 export const productsQueryApi = async (opt: QueryFunctionContext, queryParams: IProductQueryParams) => {

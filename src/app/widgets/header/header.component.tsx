@@ -14,11 +14,9 @@ const HeaderComponent: FC<Readonly<IProps>> = () => {
   return (
     <header>
       <Navbar>
-        <div className='text-gray-600'>A simple product list project</div>
+        <div className='text-gray-600'>Products list project</div>
 
-        <Link color='primary' href={'/'}>
-          Home
-        </Link>
+        <Link href={'/'}>Home</Link>
       </Navbar>
     </header>
   )
