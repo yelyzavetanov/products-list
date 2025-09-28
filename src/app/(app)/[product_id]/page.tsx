@@ -1,10 +1,11 @@
+import { notFound } from 'next/navigation'
+import { FC } from 'react'
+
+import { dehydrate, HydrationBoundary } from '@tanstack/react-query'
+
 import { productByIdQueryOptions, productsQueryOptions } from '@/app/entities/api'
 import { ProductModule } from '@/app/modules/product'
 import { getQueryClient } from '@/pkg/libraries/rest-api/service'
-
-import { dehydrate, HydrationBoundary } from '@tanstack/react-query'
-import { notFound } from 'next/navigation'
-import { FC } from 'react'
 
 // interface
 interface IProps {
@@ -14,7 +15,7 @@ interface IProps {
 // generate static params
 export async function generateStaticParams() {
   const clientQuery = getQueryClient()
-  const data = await clientQuery.fetchQuery(productsQueryOptions({}))
+  const data = await clientQuery.fetchQuery(productsQueryOptions())
 
   return data.map((p: { id: number }) => ({ product_id: String(p.id) }))
 }

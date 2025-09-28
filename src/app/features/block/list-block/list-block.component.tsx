@@ -9,23 +9,25 @@ import { Skeleton } from '@heroui/skeleton'
 import { useQuery } from '@tanstack/react-query'
 
 import { productsQueryOptions } from '@/app/entities/api'
-import { useCategoryStore } from '@/app/shared/store'
+import { useOrderStore } from '@/app/shared/store'
 
 // interface
 interface IProps {}
 
 // component
 const ListBlockComponent: FC<Readonly<IProps>> = () => {
-  const selectedCategory = useCategoryStore((s) => s.selectedCategory)
+  const { data, isLoading } = useQuery(productsQueryOptions())
 
-  const { data, isLoading } = useQuery(productsQueryOptions({ category: selectedCategory ?? null }))
+  const selectedOrder = useOrderStore((s) => s.selectedOrder)
+
+  const productsListData = selectedOrder === 'Direct' ? data : [...(data ?? [])].reverse()
 
   // return
   return (
     <Skeleton isLoaded={!isLoading} className='rounded-xl'>
       <div className='grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5'>
-        {data &&
-          data.map((product) => (
+        {productsListData &&
+          productsListData.map((product) => (
             <Link key={product.id} href={`/${product.id}`}>
               <Card
                 isPressable

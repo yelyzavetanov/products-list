@@ -1,16 +1,14 @@
 import { queryOptions } from '@tanstack/react-query'
 
-import { IProductByIdQueryParams, IProductQueryParams } from '@/app/entities/models'
+import { IProductByIdQueryParams } from '@/app/entities/models'
 
-import { productByIdQueryApi, productCategoryListApi, productsQueryApi } from './product.api'
+import { productByIdQueryApi, productsQueryApi } from './product.api'
 
 // options
-export const productsQueryOptions = (queryParams: IProductQueryParams) => {
-  const { category = '' } = queryParams
-
+export const productsQueryOptions = () => {
   return queryOptions({
-    queryKey: ['products', category],
-    queryFn: (params) => productsQueryApi(params, queryParams),
+    queryKey: ['products'],
+    queryFn: (params) => productsQueryApi(params),
   })
 }
 
@@ -21,13 +19,5 @@ export const productByIdQueryOptions = (queryParams: IProductByIdQueryParams) =>
   return queryOptions({
     queryKey: ['product', id],
     queryFn: (params) => productByIdQueryApi(params, queryParams),
-  })
-}
-
-// options
-export const productCategoryListOptions = () => {
-  return queryOptions({
-    queryKey: ['categories'],
-    queryFn: (params) => productCategoryListApi(params),
   })
 }

@@ -3,18 +3,18 @@ import { devtools } from 'zustand/middleware'
 
 // interface
 interface IState {
-  selectedCategory: string | null
+  selectedOrder: string | null
 }
 interface IStore extends IState {
-  handleCategoryStore: (value: Partial<IState>) => void
+  handleOrderStore: (value: Partial<IState>) => void
 }
 
 // store
-export const useCategoryStore = create<IStore>()(
+export const useOrderStore = create<IStore>()(
   devtools(
     (set) => ({
-      selectedCategory: null,
-      handleCategoryStore: (value: Partial<IState>) => set((state: IState) => ({ ...state, ...value })),
+      selectedOrder: null,
+      handleOrderStore: (value: Partial<IState>) => set((state: IState) => ({ ...state, ...value })),
     }),
     { enabled: process.env.NODE_ENV !== 'production' && typeof window !== 'undefined' },
   ),

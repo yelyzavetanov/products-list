@@ -2,19 +2,11 @@ import { notFound } from 'next/navigation'
 
 import { QueryFunctionContext } from '@tanstack/react-query'
 
-import {
-  ICategoriesRes,
-  IProduct,
-  IProductByIdQueryParams,
-  IProductQueryParams,
-  IProductRes,
-} from '@/app/entities/models'
+import { IProduct, IProductByIdQueryParams, IProductRes } from '@/app/entities/models'
 
 // api
-export const productsQueryApi = async (opt: QueryFunctionContext, queryParams: IProductQueryParams) => {
-  const { category = '' } = queryParams
-
-  const res = await fetch(`https://dummyjson.com/products/${category ? `category/${category}` : ''}`, {
+export const productsQueryApi = async (opt: QueryFunctionContext) => {
+  const res = await fetch(`https://dummyjson.com/products`, {
     signal: opt.signal,
     cache: 'force-cache',
     next: { revalidate: 30 },
@@ -44,23 +36,6 @@ export const productByIdQueryApi = async (opt: QueryFunctionContext, queryParams
   }
 
   const data: IProduct = await res.json()
-
-  return data
-}
-
-// api
-export const productCategoryListApi = async (opt: QueryFunctionContext) => {
-  const res = await fetch(`https://dummyjson.com/products/category-list`, {
-    signal: opt.signal,
-    cache: 'force-cache',
-    next: { revalidate: 30 },
-  })
-
-  if (!res) {
-    return notFound()
-  }
-
-  const data: ICategoriesRes = await res.json()
 
   return data
 }

@@ -5,42 +5,40 @@ import { Controller, useForm } from 'react-hook-form'
 
 import { Button } from '@heroui/button'
 import { Select, SelectItem } from '@heroui/select'
-import { useQuery } from '@tanstack/react-query'
 
-import { productCategoryListOptions } from '@/app/entities/api'
-import { ICategorySelect } from '@/app/entities/models/category.model'
-import { useCategoryStore } from '@/app/shared/store'
+import { IOrderSelect } from '@/app/entities/models'
+import { useOrderStore } from '@/app/shared/store'
 
 // interface
 interface IProps {}
 
 // component
-const CategoriesBlockComponent: FC<Readonly<IProps>> = () => {
-  const { data } = useQuery(productCategoryListOptions())
+const OrderBlockComponent: FC<Readonly<IProps>> = () => {
+  const data = ['Direct', 'Reverse']
 
-  const selectedCategory = useCategoryStore((s) => s.selectedCategory)
-  const handleCategoryStore = useCategoryStore((s) => s.handleCategoryStore)
+  const selectedOrder = useOrderStore((s) => s.selectedOrder)
+  const handleOrderStore = useOrderStore((s) => s.handleOrderStore)
 
-  const { control, handleSubmit } = useForm<ICategorySelect>({
+  const { control, handleSubmit } = useForm<IOrderSelect>({
     defaultValues: {
-      category: selectedCategory ?? '',
+      order: selectedOrder ?? '',
     },
   })
 
   // return
   return (
     <form
-      onSubmit={handleSubmit((data: ICategorySelect) => handleCategoryStore({ selectedCategory: data.category }))}
+      onSubmit={handleSubmit((data: IOrderSelect) => handleOrderStore({ selectedOrder: data.order }))}
       className='mb-6 flex justify-center'
     >
       <Controller
-        name='category'
+        name='order'
         control={control}
         render={({ field }) => (
           <Select
             className='m-2 min-w-md'
-            aria-label='Select category'
-            placeholder='Select category'
+            aria-label='Select order'
+            placeholder='Select order'
             color='primary'
             variant='bordered'
             selectedKeys={field ? [field.value] : []}
@@ -50,9 +48,9 @@ const CategoriesBlockComponent: FC<Readonly<IProps>> = () => {
             }}
           >
             <>
-              {data?.map((category: string) => (
-                <SelectItem key={category} textValue={category}>
-                  {category}
+              {data?.map((order: string) => (
+                <SelectItem key={order} textValue={order}>
+                  {order}
                 </SelectItem>
               ))}
             </>
@@ -69,7 +67,7 @@ const CategoriesBlockComponent: FC<Readonly<IProps>> = () => {
         color='primary'
         variant='bordered'
         type='button'
-        onPress={() => handleCategoryStore({ selectedCategory: null })}
+        onPress={() => handleOrderStore({ selectedOrder: 'Direct' })}
       >
         Reset
       </Button>
@@ -77,4 +75,4 @@ const CategoriesBlockComponent: FC<Readonly<IProps>> = () => {
   )
 }
 
-export default CategoriesBlockComponent
+export default OrderBlockComponent
