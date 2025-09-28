@@ -1,5 +1,6 @@
-import { cn } from '@heroui/react'
 import { FC, ReactNode } from 'react'
+
+import { cn } from '@heroui/react'
 
 // interface
 interface IProps {

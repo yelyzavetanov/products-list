@@ -1,15 +1,15 @@
 'use client'
 
-import { productsQueryOptions } from '@/app/entities/api'
-import { useCategoryStore } from '@/app/shared/store'
+import Link from 'next/link'
+import { FC } from 'react'
 
 import { Card, CardBody, CardFooter, CardHeader } from '@heroui/card'
 import { Image } from '@heroui/image'
 import { Skeleton } from '@heroui/skeleton'
 import { useQuery } from '@tanstack/react-query'
 
-import Link from 'next/link'
-import { FC } from 'react'
+import { productsQueryOptions } from '@/app/entities/api'
+import { useCategoryStore } from '@/app/shared/store'
 
 // interface
 interface IProps {}
@@ -18,7 +18,7 @@ interface IProps {}
 const ListBlockComponent: FC<Readonly<IProps>> = () => {
   const selectedCategory = useCategoryStore((s) => s.selectedCategory)
 
-  const { data, isLoading } = useQuery(productsQueryOptions({ category: selectedCategory }))
+  const { data, isLoading } = useQuery(productsQueryOptions({ category: selectedCategory ?? null }))
 
   // return
   return (

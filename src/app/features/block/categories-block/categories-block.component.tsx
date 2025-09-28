@@ -1,16 +1,15 @@
 'use client'
 
-import { productCategoryListOptions } from '@/app/entities/api'
-import { ICategorySelect } from '@/app/entities/models/category.model'
-import { useCategoryStore } from '@/app/shared/store'
+import { FC } from 'react'
+import { Controller, useForm } from 'react-hook-form'
 
 import { Button } from '@heroui/button'
 import { Select, SelectItem } from '@heroui/select'
-
 import { useQuery } from '@tanstack/react-query'
 
-import { FC } from 'react'
-import { Controller, useForm } from 'react-hook-form'
+import { productCategoryListOptions } from '@/app/entities/api'
+import { ICategorySelect } from '@/app/entities/models/category.model'
+import { useCategoryStore } from '@/app/shared/store'
 
 // interface
 interface IProps {}

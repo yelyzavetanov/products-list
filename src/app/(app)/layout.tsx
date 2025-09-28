@@ -1,10 +1,11 @@
-import { UiProvider } from '@/pkg/libraries/ui'
 import { Metadata } from 'next'
 import { FC, ReactNode } from 'react'
 
 import { LayoutModule } from '@/app/modules/layout'
-import '@/config/styles/global.css'
 import { RestApiProvider } from '@/pkg/libraries/rest-api'
+import { UiProvider } from '@/pkg/libraries/ui'
+
+import '@/config/styles/global.css'
 
 // interface
 interface IProps {

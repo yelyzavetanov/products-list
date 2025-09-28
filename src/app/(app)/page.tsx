@@ -1,5 +1,6 @@
-import { HomeModule } from '@/app/modules/home'
 import { FC } from 'react'
+
+import { HomeModule } from '@/app/modules/home'
 
 // interface
 interface IProps {}
