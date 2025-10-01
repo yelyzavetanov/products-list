@@ -1,7 +1,8 @@
 'use client'
 
+import mixpanel from 'mixpanel-browser'
 import { useTranslations } from 'next-intl'
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
 import { Controller, useForm } from 'react-hook-form'
 
 import { Button } from '@heroui/button'
@@ -9,6 +10,7 @@ import { Select, SelectItem } from '@heroui/select'
 
 import { IOrderSelect } from '@/app/entities/models'
 import { useOrderStore } from '@/app/shared/store'
+import { initMixpanel } from '@/pkg/libraries/mixpanel'
 
 // interface
 interface IProps {}
@@ -27,6 +29,10 @@ const OrderBlockComponent: FC<Readonly<IProps>> = () => {
       order: selectedOrder ?? '',
     },
   })
+
+  useEffect(() => {
+    initMixpanel()
+  }, [])
 
   // return
   return (
@@ -73,6 +79,7 @@ const OrderBlockComponent: FC<Readonly<IProps>> = () => {
         onPress={() => {
           handleOrderStore({ selectedOrder: 'Direct' })
           reset({ order: 'Direct' })
+          mixpanel.track?.('Order Reset', { order: 'Direct' })
         }}
       >
         {t('reset_products_sort_button')}
