@@ -1,4 +1,10 @@
 import type { NextConfig } from 'next'
+import createNextIntlPlugin from 'next-intl/plugin'
+
+// i18n
+const withNextIntl = createNextIntlPlugin({
+  requestConfig: './src/pkg/libraries/locale/request.ts',
+})
 
 // next config
 const nextConfig: NextConfig = {
@@ -6,8 +12,6 @@ const nextConfig: NextConfig = {
 
   poweredByHeader: false,
   cacheMaxMemorySize: 100 * 1024 * 1024,
-
-  logging: {},
 
   experimental: {
     reactCompiler: true,
@@ -33,4 +37,4 @@ const nextConfig: NextConfig = {
   },
 }
 
-export default nextConfig
+export default withNextIntl(nextConfig)

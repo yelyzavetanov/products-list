@@ -1,5 +1,6 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import { FC } from 'react'
 import { Controller, useForm } from 'react-hook-form'
 
@@ -16,10 +17,12 @@ interface IProps {}
 const OrderBlockComponent: FC<Readonly<IProps>> = () => {
   const data = ['Direct', 'Reverse']
 
+  const t = useTranslations()
+
   const selectedOrder = useOrderStore((s) => s.selectedOrder)
   const handleOrderStore = useOrderStore((s) => s.handleOrderStore)
 
-  const { control, handleSubmit } = useForm<IOrderSelect>({
+  const { control, handleSubmit, reset } = useForm<IOrderSelect>({
     defaultValues: {
       order: selectedOrder ?? '',
     },
@@ -59,7 +62,7 @@ const OrderBlockComponent: FC<Readonly<IProps>> = () => {
       />
 
       <Button color='primary' type='submit' className='mt-2'>
-        Find
+        Sort
       </Button>
 
       <Button
@@ -67,9 +70,12 @@ const OrderBlockComponent: FC<Readonly<IProps>> = () => {
         color='primary'
         variant='bordered'
         type='button'
-        onPress={() => handleOrderStore({ selectedOrder: 'Direct' })}
+        onPress={() => {
+          handleOrderStore({ selectedOrder: 'Direct' })
+          reset({ order: 'Direct' })
+        }}
       >
-        Reset
+        {t('reset_products_sort_button')}
       </Button>
     </form>
   )

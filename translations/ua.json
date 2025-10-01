@@ -1,0 +1,12 @@
+{
+  "not_found_title": "Не знайдено",
+  "not_found_button": "Повернутися",
+  "sort_products_button": "Сортувати",
+  "reset_products_sort_button": "Скинути",
+  "back_to_top": "Угору",
+  "header_title": "Проєкт списку товарів",
+  "header_link": "Головна",
+  "footer_text": "Це простий проєкт зі списком товарів.",
+  "user_clicks_count": "Обрано {amount} користувачами цього місяця",
+  "product_estimated_price": "Орієнтовна ціна"
+}

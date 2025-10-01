@@ -1,7 +1,11 @@
 import { Metadata } from 'next'
+import { hasLocale, Locale, NextIntlClientProvider } from 'next-intl'
+import { setRequestLocale } from 'next-intl/server'
+import { notFound } from 'next/navigation'
 import { FC, ReactNode } from 'react'
 
 import { LayoutModule } from '@/app/modules/layout'
+import { routing } from '@/pkg/libraries/locale'
 import { RestApiProvider } from '@/pkg/libraries/rest-api'
 import { UiProvider } from '@/pkg/libraries/ui'
 
@@ -10,6 +14,7 @@ import '@/config/styles/global.css'
 // interface
 interface IProps {
   children: ReactNode
+  params: Promise<{ locale: Locale }>
 }
 
 // metadata
@@ -41,17 +46,26 @@ export const generateMetadata = async (_props?: IProps): Promise<Metadata> => {
 
 // component
 const RootLayout: FC<Readonly<IProps>> = async (props) => {
-  const { children } = props
+  const { children, params } = props
+
+  const { locale } = await params
+  if (!hasLocale(routing.locales, locale)) {
+    notFound()
+  }
+
+  setRequestLocale(locale)
 
   // return
   return (
     <html>
       <body>
-        <UiProvider>
-          <RestApiProvider>
-            <LayoutModule>{children}</LayoutModule>
-          </RestApiProvider>
-        </UiProvider>
+        <NextIntlClientProvider>
+          <UiProvider>
+            <RestApiProvider>
+              <LayoutModule>{children}</LayoutModule>
+            </RestApiProvider>
+          </UiProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   )
