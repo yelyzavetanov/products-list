@@ -9,6 +9,7 @@ import { Button } from '@heroui/button'
 import { Select, SelectItem } from '@heroui/select'
 
 import { IOrderSelect } from '@/app/entities/models'
+import { orderOptions } from '@/app/shared/constants'
 import { useOrderStore } from '@/app/shared/store'
 import { initMixpanel } from '@/pkg/libraries/mixpanel'
 
@@ -17,7 +18,7 @@ interface IProps {}
 
 // component
 const OrderBlockComponent: FC<Readonly<IProps>> = () => {
-  const data = ['Direct', 'Reverse']
+  const data = orderOptions
 
   const t = useTranslations()
 

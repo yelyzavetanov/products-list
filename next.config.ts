@@ -1,6 +1,8 @@
 import type { NextConfig } from 'next'
 import createNextIntlPlugin from 'next-intl/plugin'
 
+import { withSentryConfig } from '@sentry/nextjs'
+
 // i18n
 const withNextIntl = createNextIntlPlugin({
   requestConfig: './src/pkg/libraries/locale/request.ts',
@@ -37,4 +39,11 @@ const nextConfig: NextConfig = {
   },
 }
 
-export default withNextIntl(nextConfig)
+export default withSentryConfig(withNextIntl(nextConfig), {
+  org: 'ruby-labs',
+  project: 'javascript-nextjs',
+  silent: !process.env.CI,
+  widenClientFileUpload: true,
+  disableLogger: true,
+  automaticVercelMonitors: true,
+})
