@@ -38,7 +38,7 @@ const HeaderComponent: FC<Readonly<IProps>> = () => {
           )}
           {locale === 'uk' && (
             <Button color='primary' size='sm' variant='bordered' onPress={() => switchLocale('en')} className='mx-4'>
-              UK
+              УКР
             </Button>
           )}
         </div>
