@@ -7,6 +7,7 @@ import { Button } from '@heroui/button'
 import { Navbar } from '@heroui/navbar'
 
 import { Link, usePathname, useRouter } from '@/pkg/libraries/locale'
+import { gb } from '@/pkg/utils/growthbook'
 
 // interface
 interface IProps {}
@@ -23,11 +24,17 @@ const HeaderComponent: FC<Readonly<IProps>> = () => {
     router.push(pathname, { locale: nextLocale })
   }
 
+  const colorfulHeaderText = gb.isOn('colorfulHeaderText')
+
   // return
   return (
     <header>
       <Navbar>
-        <div className='text-gray-600'>{t('header_title')}</div>
+        {colorfulHeaderText ? (
+          <div className='text-primary font-bold'>{t('header_title')}</div>
+        ) : (
+          <div className='text-gray-600'>{t('header_title')}</div>
+        )}
 
         <div>
           <Link href={'/'} locale={locale}>
