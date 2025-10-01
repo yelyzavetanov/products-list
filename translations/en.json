@@ -8,5 +8,8 @@
   "header_link": "Home",
   "footer_text": "This is a simple products list project.",
   "user_clicks_count": "Picked by {amount} users this month",
-  "product_estimated_price": "Estimated Price"
+  "product_list_order_options": {
+    "direct": "Direct",
+    "reverse": "Reverse"
+  }
 }

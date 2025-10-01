@@ -1,6 +1,5 @@
 'use client'
 
-import Link from 'next/link'
 import { FC } from 'react'
 
 import { Card, CardBody, CardFooter, CardHeader } from '@heroui/card'
@@ -10,6 +9,7 @@ import { useQuery } from '@tanstack/react-query'
 
 import { productsQueryOptions } from '@/app/entities/api'
 import { useOrderStore } from '@/app/shared/store'
+import { Link } from '@/pkg/libraries/locale'
 
 // interface
 interface IProps {}

@@ -8,5 +8,8 @@
   "header_link": "Головна",
   "footer_text": "Це простий проєкт зі списком товарів.",
   "user_clicks_count": "Обрано {amount} користувачами цього місяця",
-  "product_estimated_price": "Орієнтовна ціна"
+  "product_list_order_options": {
+    "direct": "Прямий",
+    "reverse": "Обернений"
+  }
 }

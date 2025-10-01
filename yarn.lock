@@ -751,7 +751,7 @@
     "@heroui/shared-utils" "2.1.11"
     "@heroui/use-data-scroll-overflow" "2.2.12"
 
-"@heroui/select@2.4.27":
+"@heroui/select@2.4.27", "@heroui/select@^2.4.27":
   version "2.4.27"
   resolved "https://registry.yarnpkg.com/@heroui/select/-/select-2.4.27.tgz#8a1b696799f87115061af73b14e82f2044313f4a"
   integrity sha512-CgMqVWYWcdHNOnSeMMraXFBXFsToyxZ9sSwszG3YlhGwaaj0yZonquMYgl5vHCnFLkGXwggNczl+vdDErLEsbw==

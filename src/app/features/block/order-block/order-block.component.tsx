@@ -52,8 +52,8 @@ const OrderBlockComponent: FC<Readonly<IProps>> = () => {
           >
             <>
               {data?.map((order: string) => (
-                <SelectItem key={order} textValue={order}>
-                  {order}
+                <SelectItem key={order} textValue={t(`product_list_order_options.${order.toLowerCase()}`)}>
+                  {t(`product_list_order_options.${order.toLowerCase()}`)}
                 </SelectItem>
               ))}
             </>
@@ -62,7 +62,7 @@ const OrderBlockComponent: FC<Readonly<IProps>> = () => {
       />
 
       <Button color='primary' type='submit' className='mt-2'>
-        Sort
+        {t('sort_products_button')}
       </Button>
 
       <Button
