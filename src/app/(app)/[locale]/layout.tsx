@@ -57,7 +57,7 @@ const RootLayout: FC<Readonly<IProps>> = async (props) => {
 
   // return
   return (
-    <html>
+    <html lang={locale}>
       <body>
         <NextIntlClientProvider>
           <UiProvider>
