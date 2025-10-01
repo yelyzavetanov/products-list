@@ -30,7 +30,9 @@ const HeaderComponent: FC<Readonly<IProps>> = () => {
         <div className='text-gray-600'>{t('header_title')}</div>
 
         <div>
-          <Link href={'/'}>{t('header_link')}</Link>
+          <Link href={'/'} locale={locale}>
+            {t('header_link')}
+          </Link>
           {locale === 'en' && (
             <Button color='primary' size='sm' variant='bordered' onPress={() => switchLocale('uk')} className='mx-4'>
               EN

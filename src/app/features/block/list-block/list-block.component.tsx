@@ -1,5 +1,6 @@
 'use client'
 
+import { useLocale } from 'next-intl'
 import { FC } from 'react'
 
 import { Card, CardBody, CardFooter, CardHeader } from '@heroui/card'
@@ -18,6 +19,8 @@ interface IProps {}
 const ListBlockComponent: FC<Readonly<IProps>> = () => {
   const { data, isLoading } = useQuery(productsQueryOptions())
 
+  const locale = useLocale()
+
   const selectedOrder = useOrderStore((s) => s.selectedOrder)
 
   const productsListData = selectedOrder === 'Direct' ? data : [...(data ?? [])].reverse()
@@ -28,7 +31,7 @@ const ListBlockComponent: FC<Readonly<IProps>> = () => {
       <div className='grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5'>
         {productsListData &&
           productsListData.map((product) => (
-            <Link key={product.id} href={`/${product.id}`}>
+            <Link key={product.id} href={`/${product.id}`} locale={locale}>
               <Card
                 isPressable
                 shadow='sm'
