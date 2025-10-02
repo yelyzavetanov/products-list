@@ -17,7 +17,7 @@ const SentryProvider: FC<Readonly<IProps>> = (props) => {
     Sentry.init({
       dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
       tracesSampleRate: 1,
-      debug: true,
+      debug: false,
     })
   }, [])
 

@@ -7,18 +7,19 @@ import { Controller, useForm } from 'react-hook-form'
 import { Button } from '@heroui/button'
 import { Select, SelectItem } from '@heroui/select'
 import { captureException, withScope } from '@sentry/nextjs'
+import { useQuery } from '@tanstack/react-query'
 
-import { IOrderSelect } from '@/app/entities/models'
-import { orderOptions } from '@/app/shared/constants'
+import { orderQueryOptions } from '@/app/entities/api'
+import { IOrder, IOrderSelect } from '@/app/entities/models'
 import { useOrderStore } from '@/app/shared/store'
-import { mixpanelUtils } from '@/pkg/libraries/mixpanel'
+import { mixpanelUtils } from '@/pkg/integrations/mixpanel'
 
 // interface
 interface IProps {}
 
 // component
 const OrderBlockComponent: FC<Readonly<IProps>> = () => {
-  const data = orderOptions
+  const { data } = useQuery(orderQueryOptions())
 
   const t = useTranslations()
 
@@ -64,9 +65,12 @@ const OrderBlockComponent: FC<Readonly<IProps>> = () => {
             }}
           >
             <>
-              {data?.map((order: string) => (
-                <SelectItem key={order} textValue={t(`product_list_order_options.${order.toLowerCase()}`)}>
-                  {t(`product_list_order_options.${order.toLowerCase()}`)}
+              {data?.map((order: IOrder) => (
+                <SelectItem
+                  key={order.option}
+                  textValue={t(`product_list_order_options.${order.option.toLowerCase()}`)}
+                >
+                  {t(`product_list_order_options.${order.option.toLowerCase()}`)}
                 </SelectItem>
               ))}
             </>
