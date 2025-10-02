@@ -54,6 +54,7 @@ const OrderBlockComponent: FC<Readonly<IProps>> = () => {
         render={({ field }) => (
           <Select
             className='m-2 min-w-md'
+            data-testid='order-select'
             aria-label='Select order'
             placeholder='Select order'
             color='primary'
@@ -68,6 +69,7 @@ const OrderBlockComponent: FC<Readonly<IProps>> = () => {
               {data?.map((order: IOrder) => (
                 <SelectItem
                   key={order.option}
+                  data-testid={`order-option-${order.option.toLowerCase()}`}
                   textValue={t(`product_list_order_options.${order.option.toLowerCase()}`)}
                 >
                   {t(`product_list_order_options.${order.option.toLowerCase()}`)}
@@ -78,12 +80,13 @@ const OrderBlockComponent: FC<Readonly<IProps>> = () => {
         )}
       />
 
-      <Button color='primary' type='submit' className='mt-2'>
+      <Button data-testid='submit-order' color='primary' type='submit' className='mt-2'>
         {t('sort_products_button')}
       </Button>
 
       <Button
         className='m-2'
+        data-testid='reset-order'
         color='primary'
         variant='bordered'
         type='button'
