@@ -1,17 +1,17 @@
 'use client'
 
-import mixpanel from 'mixpanel-browser'
 import { useTranslations } from 'next-intl'
-import { FC, useEffect } from 'react'
+import { FC } from 'react'
 import { Controller, useForm } from 'react-hook-form'
 
 import { Button } from '@heroui/button'
 import { Select, SelectItem } from '@heroui/select'
+import { captureException, withScope } from '@sentry/nextjs'
 
 import { IOrderSelect } from '@/app/entities/models'
 import { orderOptions } from '@/app/shared/constants'
 import { useOrderStore } from '@/app/shared/store'
-import { initMixpanel } from '@/pkg/libraries/mixpanel'
+import { mixpanelUtils } from '@/pkg/libraries/mixpanel'
 
 // interface
 interface IProps {}
@@ -31,16 +31,22 @@ const OrderBlockComponent: FC<Readonly<IProps>> = () => {
     },
   })
 
-  useEffect(() => {
-    initMixpanel()
-  }, [])
+  const handleSubmitOrder = (data: IOrderSelect) => {
+    try {
+      handleOrderStore({ selectedOrder: data.order })
+    } catch (err) {
+      withScope((scope) => {
+        scope.setTag('component', 'OrderBlockComponent')
+        scope.setTag('action', 'submitOrder')
+        scope.setExtra('order', data.order)
+        captureException(err)
+      })
+    }
+  }
 
   // return
   return (
-    <form
-      onSubmit={handleSubmit((data: IOrderSelect) => handleOrderStore({ selectedOrder: data.order }))}
-      className='mb-6 flex justify-center'
-    >
+    <form onSubmit={handleSubmit(handleSubmitOrder)} className='mb-6 flex justify-center'>
       <Controller
         name='order'
         control={control}
@@ -80,7 +86,7 @@ const OrderBlockComponent: FC<Readonly<IProps>> = () => {
         onPress={() => {
           handleOrderStore({ selectedOrder: 'Direct' })
           reset({ order: 'Direct' })
-          mixpanel.track?.('Order Reset', { order: 'Direct' })
+          mixpanelUtils.trackResetSort()
         }}
       >
         {t('reset_products_sort_button')}

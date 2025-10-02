@@ -7,7 +7,9 @@ import { FC, ReactNode } from 'react'
 import { LayoutModule } from '@/app/modules/layout'
 import { GrowthBookProvider } from '@/pkg/libraries/growthbook'
 import { routing } from '@/pkg/libraries/locale'
+import { MixpanelProvider } from '@/pkg/libraries/mixpanel'
 import { RestApiProvider } from '@/pkg/libraries/rest-api'
+import { SentryProvider } from '@/pkg/libraries/sentry'
 import { UiProvider } from '@/pkg/libraries/ui'
 
 import '@/config/styles/global.css'
@@ -60,15 +62,19 @@ const RootLayout: FC<Readonly<IProps>> = async (props) => {
   return (
     <html lang={locale}>
       <body>
-        <GrowthBookProvider>
-          <NextIntlClientProvider>
-            <UiProvider>
-              <RestApiProvider>
-                <LayoutModule>{children}</LayoutModule>
-              </RestApiProvider>
-            </UiProvider>
-          </NextIntlClientProvider>
-        </GrowthBookProvider>
+        <SentryProvider>
+          <GrowthBookProvider>
+            <MixpanelProvider>
+              <NextIntlClientProvider>
+                <UiProvider>
+                  <RestApiProvider>
+                    <LayoutModule>{children}</LayoutModule>
+                  </RestApiProvider>
+                </UiProvider>
+              </NextIntlClientProvider>
+            </MixpanelProvider>
+          </GrowthBookProvider>
+        </SentryProvider>
       </body>
     </html>
   )
