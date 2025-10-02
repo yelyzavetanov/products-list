@@ -6,7 +6,7 @@ import { FC } from 'react'
 import { Button } from '@heroui/button'
 import { Navbar } from '@heroui/navbar'
 
-import { useFeatureFlag } from '@/pkg/libraries/growthbook'
+import { useFeatureFlag } from '@/pkg/integrations/growthbook'
 import { Link, usePathname, useRouter } from '@/pkg/libraries/locale'
 
 // interface
