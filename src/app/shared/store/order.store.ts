@@ -13,7 +13,7 @@ interface IStore extends IState {
 export const useOrderStore = create<IStore>()(
   devtools(
     (set) => ({
-      selectedOrder: null,
+      selectedOrder: 'Direct',
       handleOrderStore: (value: Partial<IState>) => set((state: IState) => ({ ...state, ...value })),
     }),
     { enabled: process.env.NODE_ENV !== 'production' && typeof window !== 'undefined' },

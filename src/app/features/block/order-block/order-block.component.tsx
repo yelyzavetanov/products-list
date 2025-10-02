@@ -1,29 +1,39 @@
 'use client'
 
-import { FC } from 'react'
+import mixpanel from 'mixpanel-browser'
+import { useTranslations } from 'next-intl'
+import { FC, useEffect } from 'react'
 import { Controller, useForm } from 'react-hook-form'
 
 import { Button } from '@heroui/button'
 import { Select, SelectItem } from '@heroui/select'
 
 import { IOrderSelect } from '@/app/entities/models'
+import { orderOptions } from '@/app/shared/constants'
 import { useOrderStore } from '@/app/shared/store'
+import { initMixpanel } from '@/pkg/libraries/mixpanel'
 
 // interface
 interface IProps {}
 
 // component
 const OrderBlockComponent: FC<Readonly<IProps>> = () => {
-  const data = ['Direct', 'Reverse']
+  const data = orderOptions
+
+  const t = useTranslations()
 
   const selectedOrder = useOrderStore((s) => s.selectedOrder)
   const handleOrderStore = useOrderStore((s) => s.handleOrderStore)
 
-  const { control, handleSubmit } = useForm<IOrderSelect>({
+  const { control, handleSubmit, reset } = useForm<IOrderSelect>({
     defaultValues: {
       order: selectedOrder ?? '',
     },
   })
+
+  useEffect(() => {
+    initMixpanel()
+  }, [])
 
   // return
   return (
@@ -49,8 +59,8 @@ const OrderBlockComponent: FC<Readonly<IProps>> = () => {
           >
             <>
               {data?.map((order: string) => (
-                <SelectItem key={order} textValue={order}>
-                  {order}
+                <SelectItem key={order} textValue={t(`product_list_order_options.${order.toLowerCase()}`)}>
+                  {t(`product_list_order_options.${order.toLowerCase()}`)}
                 </SelectItem>
               ))}
             </>
@@ -59,7 +69,7 @@ const OrderBlockComponent: FC<Readonly<IProps>> = () => {
       />
 
       <Button color='primary' type='submit' className='mt-2'>
-        Find
+        {t('sort_products_button')}
       </Button>
 
       <Button
@@ -67,9 +77,13 @@ const OrderBlockComponent: FC<Readonly<IProps>> = () => {
         color='primary'
         variant='bordered'
         type='button'
-        onPress={() => handleOrderStore({ selectedOrder: 'Direct' })}
+        onPress={() => {
+          handleOrderStore({ selectedOrder: 'Direct' })
+          reset({ order: 'Direct' })
+          mixpanel.track?.('Order Reset', { order: 'Direct' })
+        }}
       >
-        Reset
+        {t('reset_products_sort_button')}
       </Button>
     </form>
   )

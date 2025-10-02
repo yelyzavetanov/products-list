@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link'
+import { useLocale } from 'next-intl'
 import { FC } from 'react'
 
 import { Card, CardBody, CardFooter, CardHeader } from '@heroui/card'
@@ -10,6 +10,7 @@ import { useQuery } from '@tanstack/react-query'
 
 import { productsQueryOptions } from '@/app/entities/api'
 import { useOrderStore } from '@/app/shared/store'
+import { Link } from '@/pkg/libraries/locale'
 
 // interface
 interface IProps {}
@@ -17,6 +18,8 @@ interface IProps {}
 // component
 const ListBlockComponent: FC<Readonly<IProps>> = () => {
   const { data, isLoading } = useQuery(productsQueryOptions())
+
+  const locale = useLocale()
 
   const selectedOrder = useOrderStore((s) => s.selectedOrder)
 
@@ -28,7 +31,7 @@ const ListBlockComponent: FC<Readonly<IProps>> = () => {
       <div className='grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5'>
         {productsListData &&
           productsListData.map((product) => (
-            <Link key={product.id} href={`/${product.id}`}>
+            <Link key={product.id} href={`/${product.id}`} locale={locale}>
               <Card
                 isPressable
                 shadow='sm'

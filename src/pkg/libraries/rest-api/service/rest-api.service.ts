@@ -1,7 +1,8 @@
-import { defaultShouldDehydrateQuery, isServer, QueryClient } from '@tanstack/react-query'
+import { defaultShouldDehydrateQuery, isServer, keepPreviousData, QueryClient } from '@tanstack/react-query'
 
 let browserQueryClient: QueryClient | undefined = undefined
 
+// make query client
 const makeQueryClient = () => {
   return new QueryClient({
     defaultOptions: {
@@ -9,6 +10,7 @@ const makeQueryClient = () => {
         staleTime: 60 * 1000,
         networkMode: 'offlineFirst',
         refetchOnWindowFocus: false,
+        placeholderData: keepPreviousData,
       },
       dehydrate: {
         shouldDehydrateQuery: (query) => {

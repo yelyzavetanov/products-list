@@ -9,16 +9,27 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@flags-sdk/growthbook": "^0.1.0",
+    "@growthbook/growthbook": "^1.6.1",
     "@heroui/react": "^2.8.1",
+    "@heroui/select": "^2.4.27",
     "@playwright/test": "^1.55.1",
+    "@sentry/nextjs": "^10",
+    "@t3-oss/env-nextjs": "^0.13.8",
     "@tanstack/react-query": "^5.90.2",
     "@tanstack/react-query-devtools": "^5.90.2",
     "babel-plugin-react-compiler": "^19.1.0-rc.2",
     "framer-motion": "^12.23.22",
+    "ky": "^1.11.0",
+    "mixpanel": "^0.18.1",
+    "mixpanel-browser": "^2.70.0",
     "next": "15.5.4",
+    "next-intl": "^4.3.9",
+    "qs-esm": "^7.0.2",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-hook-form": "^7.60.0",
+    "zod": "^4.1.11",
     "zustand": "^5.0.6"
   },
   "devDependencies": {

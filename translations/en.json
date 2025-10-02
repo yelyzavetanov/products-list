@@ -1,0 +1,15 @@
+{
+  "not_found_title": "Not Found",
+  "not_found_button": "Go Back",
+  "sort_products_button": "Sort",
+  "reset_products_sort_button": "Reset",
+  "back_to_top": "Back to top",
+  "header_title": "Products list project",
+  "header_link": "Home",
+  "footer_text": "This is a simple products list project.",
+  "user_clicks_count": "Picked by {amount} users this month",
+  "product_list_order_options": {
+    "direct": "Direct",
+    "reverse": "Reverse"
+  }
+}
