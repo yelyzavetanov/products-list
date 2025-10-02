@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@flags-sdk/growthbook": "^0.1.0",
+    "@growthbook/growthbook": "^1.6.1",
     "@heroui/react": "^2.8.1",
     "@heroui/select": "^2.4.27",
     "@playwright/test": "^1.55.1",

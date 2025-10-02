@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation'
 import { FC, ReactNode } from 'react'
 
 import { LayoutModule } from '@/app/modules/layout'
+import { GrowthBookProvider } from '@/pkg/libraries/growthbook'
 import { routing } from '@/pkg/libraries/locale'
 import { RestApiProvider } from '@/pkg/libraries/rest-api'
 import { UiProvider } from '@/pkg/libraries/ui'
@@ -59,13 +60,15 @@ const RootLayout: FC<Readonly<IProps>> = async (props) => {
   return (
     <html lang={locale}>
       <body>
-        <NextIntlClientProvider>
-          <UiProvider>
-            <RestApiProvider>
-              <LayoutModule>{children}</LayoutModule>
-            </RestApiProvider>
-          </UiProvider>
-        </NextIntlClientProvider>
+        <GrowthBookProvider>
+          <NextIntlClientProvider>
+            <UiProvider>
+              <RestApiProvider>
+                <LayoutModule>{children}</LayoutModule>
+              </RestApiProvider>
+            </UiProvider>
+          </NextIntlClientProvider>
+        </GrowthBookProvider>
       </body>
     </html>
   )

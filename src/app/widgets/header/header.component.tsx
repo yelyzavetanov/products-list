@@ -6,8 +6,8 @@ import { FC } from 'react'
 import { Button } from '@heroui/button'
 import { Navbar } from '@heroui/navbar'
 
+import { useFeatureFlag } from '@/pkg/libraries/growthbook'
 import { Link, usePathname, useRouter } from '@/pkg/libraries/locale'
-import { gb } from '@/pkg/utils/growthbook'
 
 // interface
 interface IProps {}
@@ -24,7 +24,7 @@ const HeaderComponent: FC<Readonly<IProps>> = () => {
     router.push(pathname, { locale: nextLocale })
   }
 
-  const colorfulHeaderText = gb.isOn('colorfulHeaderText')
+  const colorfulHeaderText = useFeatureFlag('colorful-header-text', false)
 
   // return
   return (
