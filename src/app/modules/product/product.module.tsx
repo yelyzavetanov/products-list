@@ -1,7 +1,7 @@
 import { FC } from 'react'
 
 import { IProduct } from '@/app/entities/models'
-import { ProductBlockComponent } from '@/app/features/block/product-block'
+import { ProductBlockComponent } from '@/app/features/block'
 import { ContainerComponent } from '@/app/shared/ui/container'
 
 // interface
