@@ -1,3 +1,4 @@
+import { setRequestLocale } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import { FC } from 'react'
 
@@ -9,7 +10,7 @@ import { getQueryClient } from '@/pkg/libraries/rest-api/service'
 
 // interface
 interface IProps {
-  params: Promise<{ product_id: string }>
+  params: Promise<{ locale: string; product_id: string }>
 }
 
 // generate static params
@@ -17,12 +18,26 @@ export async function generateStaticParams() {
   const clientQuery = getQueryClient()
   const data = await clientQuery.fetchQuery(productsQueryOptions())
 
-  return data.map((p: { id: number }) => ({ product_id: String(p.id) }))
+  const locales = ['en', 'uk']
+  const params: Array<{ locale: string; product_id: string }> = []
+
+  for (const locale of locales) {
+    for (const product of data) {
+      params.push({
+        locale,
+        product_id: String(product.id),
+      })
+    }
+  }
+
+  return params
 }
 
 // component
 const Page: FC<Readonly<IProps>> = async (props) => {
-  const { product_id } = await props.params
+  const { locale, product_id } = await props.params
+
+  setRequestLocale(locale)
 
   const clientQuery = getQueryClient()
   const productData = await clientQuery.fetchQuery(productByIdQueryOptions({ id: product_id }))
