@@ -8,7 +8,7 @@ create table if not exists business.order_options (
   option text
 );
 
--- Fill order_options table with data
+-- fill order_options table with data
 insert into business.order_options (id, option) values
   ('1', 'Direct'),
   ('2', 'Reverse');
