@@ -63,8 +63,8 @@ const RootLayout: FC<Readonly<IProps>> = async (props) => {
     <html lang={locale}>
       <body>
         <SentryProvider>
-          <GrowthBookProvider>
-            <MixpanelProvider>
+          <MixpanelProvider>
+            <GrowthBookProvider>
               <NextIntlClientProvider>
                 <UiProvider>
                   <RestApiProvider>
@@ -72,8 +72,8 @@ const RootLayout: FC<Readonly<IProps>> = async (props) => {
                   </RestApiProvider>
                 </UiProvider>
               </NextIntlClientProvider>
-            </MixpanelProvider>
-          </GrowthBookProvider>
+            </GrowthBookProvider>
+          </MixpanelProvider>
         </SentryProvider>
       </body>
     </html>
