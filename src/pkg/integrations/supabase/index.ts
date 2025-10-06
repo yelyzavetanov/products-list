@@ -1,1 +1,1 @@
-export { default as SubpabaseManager } from './supabase.manager'
+export { default as SupabaseManager } from './supabase.manager'

@@ -20,9 +20,7 @@ const nextConfig: NextConfig = {
     optimizeServerReact: true,
     optimizePackageImports: [
       'zod',
-      'luxon',
       'react-hook-form',
-      'usehooks-ts',
       '@heroui/react',
       '@heroui/system',
       '@heroui/button',

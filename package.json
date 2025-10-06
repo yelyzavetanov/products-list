@@ -9,11 +9,9 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@flags-sdk/growthbook": "^0.1.0",
     "@growthbook/growthbook": "^1.6.1",
     "@heroui/react": "^2.8.1",
     "@heroui/select": "^2.4.27",
-    "@playwright/test": "^1.55.1",
     "@sentry/nextjs": "^10",
     "@supabase/supabase-js": "^2.58.0",
     "@t3-oss/env-nextjs": "^0.13.8",
@@ -22,7 +20,6 @@
     "babel-plugin-react-compiler": "^19.1.0-rc.2",
     "framer-motion": "^12.23.22",
     "ky": "^1.11.0",
-    "mixpanel": "^0.18.1",
     "mixpanel-browser": "^2.70.0",
     "next": "15.5.4",
     "next-intl": "^4.3.9",
@@ -40,6 +37,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@typescript-eslint/eslint-plugin": "^8.38.0",
+    "@playwright/test": "^1.55.1",
     "eslint": "^9",
     "eslint-config-next": "15.5.4",
     "eslint-config-prettier": "^10.1.8",
