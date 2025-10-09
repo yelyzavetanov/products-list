@@ -1,5 +1,7 @@
 import { createClient, SupabaseClient } from '@supabase/supabase-js'
 
+import { envServer } from './../../../config/env/env.server'
+
 import 'server-only'
 
 // supabase manager
@@ -8,10 +10,7 @@ class SupabaseManager {
 
   static getClient(): SupabaseClient {
     if (!SupabaseManager.instance) {
-      SupabaseManager.instance = createClient(
-        process.env.NEXT_PUBLIC_SUPABASE_URL!,
-        process.env.SUPABASE_SERVICE_ROLE_KEY!,
-      )
+      SupabaseManager.instance = createClient(envServer.SUPABASE_URL!, envServer.SUPABASE_SERVICE_ROLE_KEY!)
     }
     return SupabaseManager.instance
   }

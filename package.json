@@ -18,11 +18,14 @@
     "@tanstack/react-query": "^5.90.2",
     "@tanstack/react-query-devtools": "^5.90.2",
     "babel-plugin-react-compiler": "^19.1.0-rc.2",
+    "dotenv": "^17.2.3",
+    "drizzle-orm": "^0.44.6",
     "framer-motion": "^12.23.22",
     "ky": "^1.11.0",
     "mixpanel-browser": "^2.70.0",
     "next": "15.5.4",
     "next-intl": "^4.3.9",
+    "postgres": "^3.4.7",
     "qs-esm": "^7.0.2",
     "react": "19.1.0",
     "react-dom": "19.1.0",
@@ -32,12 +35,13 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@playwright/test": "^1.55.1",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@typescript-eslint/eslint-plugin": "^8.38.0",
-    "@playwright/test": "^1.55.1",
+    "drizzle-kit": "^0.31.5",
     "eslint": "^9",
     "eslint-config-next": "15.5.4",
     "eslint-config-prettier": "^10.1.8",
@@ -48,6 +52,7 @@
     "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.6.14",
     "tailwindcss": "^4",
+    "tsx": "^4.20.6",
     "typescript": "^5"
   }
 }

@@ -7,10 +7,13 @@ export const envClient = createEnv({
   client: {
     NEXT_PUBLIC_CLIENT_WEB_URL: z.string().min(1, { message: 'NEXT_PUBLIC_CLIENT_WEB_URL is required' }),
     NEXT_PUBLIC_CLIENT_API_URL: z.string().min(1, { message: 'NEXT_PUBLIC_CLIENT_API_URL is required' }),
+
+    NEXT_PUBLIC_SENTRY_DSN: z.string().min(1, { message: 'NEXT_PUBLIC_SENTRY_DSN is required' }),
   },
   emptyStringAsUndefined: true,
   runtimeEnv: {
     NEXT_PUBLIC_CLIENT_WEB_URL: process.env.NEXT_PUBLIC_CLIENT_WEB_URL,
     NEXT_PUBLIC_CLIENT_API_URL: process.env.NEXT_PUBLIC_CLIENT_API_URL,
+    NEXT_PUBLIC_SENTRY_DSN: process.env.NEXT_PUBLIC_SENTRY_DSN,
   },
 })
