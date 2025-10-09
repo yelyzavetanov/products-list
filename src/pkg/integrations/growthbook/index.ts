@@ -1,2 +1,2 @@
-export { useFeatureFlag } from './growthbook.hook'
-export { default as GrowthBookProvider, useGrowthBook } from './growthbook.provider'
+export * from './growthbook.adapter'
+export * from './growthbook.server'

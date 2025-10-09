@@ -4,7 +4,7 @@ import { type FC, type ReactNode, useEffect } from 'react'
 
 import * as Sentry from '@sentry/nextjs'
 
-import { envServer } from '@/config/env'
+import { envClient } from '@/config/env'
 
 // interface
 interface IProps {
@@ -17,7 +17,7 @@ const SentryProvider: FC<Readonly<IProps>> = (props) => {
 
   useEffect(() => {
     Sentry.init({
-      dsn: envServer.SENTRY_DSN,
+      dsn: envClient.NEXT_PUBLIC_SENTRY_DSN,
       tracesSampleRate: 1,
       debug: false,
     })

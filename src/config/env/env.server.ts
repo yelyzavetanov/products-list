@@ -5,7 +5,6 @@ import { createEnv } from '@t3-oss/env-nextjs'
 // env server
 export const envServer = createEnv({
   server: {
-    SENTRY_DSN: z.string().min(1, { message: 'NEXT_PUBLIC_SENTRY_DSN is required' }),
     GROWTHBOOK_CLIENT_KEY: z.string().min(1, { message: 'GROWTHBOOK_CLIENT_KEY is required' }),
     GROWTHBOOK_API_HOST: z.string().min(1, { message: 'GROWTHBOOK_API_HOST is required' }),
     GROWTHBOOK_APP_ORIGIN: z.string().min(1, { message: 'GROWTHBOOK_APP_ORIGIN is required' }),
@@ -16,7 +15,6 @@ export const envServer = createEnv({
   },
   emptyStringAsUndefined: true,
   runtimeEnv: {
-    SENTRY_DSN: process.env.SENTRY_DSN,
     GROWTHBOOK_CLIENT_KEY: process.env.GROWTHBOOK_CLIENT_KEY,
     GROWTHBOOK_API_HOST: process.env.GROWTHBOOK_API_HOST,
     GROWTHBOOK_APP_ORIGIN: process.env.GROWTHBOOK_APP_ORIGIN,

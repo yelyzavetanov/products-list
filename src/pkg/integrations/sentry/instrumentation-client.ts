@@ -1,9 +1,9 @@
 import * as Sentry from '@sentry/nextjs'
 
-import { envServer } from '@/config/env'
+import { envClient } from '@/config/env'
 
 Sentry.init({
-  dsn: envServer.SENTRY_DSN,
+  dsn: envClient.NEXT_PUBLIC_SENTRY_DSN,
   integrations: [Sentry.replayIntegration()],
   tracesSampleRate: 1,
   enableLogs: true,

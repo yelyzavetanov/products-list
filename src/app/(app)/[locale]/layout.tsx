@@ -5,7 +5,6 @@ import { FC, ReactNode } from 'react'
 
 import { LayoutModule } from '@/app/modules/layout'
 import { envClient } from '@/config/env'
-import { GrowthBookProvider } from '@/pkg/integrations/growthbook'
 import { MixpanelProvider } from '@/pkg/integrations/mixpanel'
 import { SentryProvider } from '@/pkg/integrations/sentry'
 import { RestApiProvider } from '@/pkg/libraries/rest-api'
@@ -60,15 +59,13 @@ const RootLayout: FC<Readonly<IProps>> = async (props) => {
       <body>
         <SentryProvider>
           <MixpanelProvider>
-            <GrowthBookProvider>
-              <NextIntlClientProvider>
-                <UiProvider>
-                  <RestApiProvider>
-                    <LayoutModule>{children}</LayoutModule>
-                  </RestApiProvider>
-                </UiProvider>
-              </NextIntlClientProvider>
-            </GrowthBookProvider>
+            <NextIntlClientProvider>
+              <UiProvider>
+                <RestApiProvider>
+                  <LayoutModule>{children}</LayoutModule>
+                </RestApiProvider>
+              </UiProvider>
+            </NextIntlClientProvider>
           </MixpanelProvider>
         </SentryProvider>
       </body>

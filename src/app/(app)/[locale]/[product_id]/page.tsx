@@ -2,6 +2,7 @@ import { FC } from 'react'
 
 import { productByIdQueryOptions, productsQueryOptions } from '@/app/entities/api'
 import { ProductModule } from '@/app/modules/product'
+import { getFeatureValue } from '@/pkg/integrations/growthbook/growthbook.adapter'
 import { routing } from '@/pkg/libraries/locale'
 import { getQueryClient } from '@/pkg/libraries/rest-api/service'
 
@@ -33,11 +34,13 @@ export async function generateStaticParams() {
 const Page: FC<Readonly<IProps>> = async (props) => {
   const { product_id } = await props.params
 
+  const isWelcomeEnabled = await getFeatureValue<boolean>('welcome-message', false, { productId: product_id })
+
   const clientQuery = getQueryClient()
   const productData = await clientQuery.fetchQuery(productByIdQueryOptions({ id: product_id }))
 
   // return
-  return <ProductModule data={productData} />
+  return <ProductModule data={productData} isWelcomeEnabled={isWelcomeEnabled} />
 }
 
 export default Page

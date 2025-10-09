@@ -7,16 +7,17 @@ import { ContainerComponent } from '@/app/shared/ui/container'
 // interface
 interface IProps {
   data: IProduct
+  isWelcomeEnabled: boolean
 }
 
 // component
 const ProductModule: FC<Readonly<IProps>> = (props) => {
-  const { data } = props
+  const { data, isWelcomeEnabled } = props
 
   // return
   return (
     <ContainerComponent className='justify-center'>
-      <ProductBlockComponent product={data} />
+      <ProductBlockComponent product={data} isWelcomeEnabled={isWelcomeEnabled} />
     </ContainerComponent>
   )
 }
