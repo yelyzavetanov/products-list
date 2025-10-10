@@ -1,7 +1,7 @@
 'use client'
 
 import { useLocale } from 'next-intl'
-import { FC } from 'react'
+import { FC, useMemo } from 'react'
 
 import { Card, CardBody, CardFooter, CardHeader } from '@heroui/card'
 import { Image } from '@heroui/image'
@@ -9,21 +9,25 @@ import { Skeleton } from '@heroui/skeleton'
 import { useQuery } from '@tanstack/react-query'
 
 import { productsQueryOptions } from '@/app/entities/api'
-import { useOrderStore } from '@/app/shared/store'
 import { Link } from '@/pkg/libraries/locale'
 
 // interface
-interface IProps {}
+interface IProps {
+  order: string
+}
 
 // component
-const ListBlockComponent: FC<Readonly<IProps>> = () => {
+const ListBlockComponent: FC<Readonly<IProps>> = (props) => {
+  const { order } = props
+
   const { data, isLoading } = useQuery(productsQueryOptions())
 
   const locale = useLocale()
 
-  const selectedOrder = useOrderStore((s) => s.selectedOrder)
-
-  const productsListData = selectedOrder === 'Direct' ? data : [...(data ?? [])].reverse()
+  const productsListData = useMemo(() => {
+    if (!data) return []
+    return order === 'Direct' ? data : [...data].reverse()
+  }, [data, order])
 
   // return
   return (

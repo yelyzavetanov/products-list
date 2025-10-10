@@ -9,14 +9,19 @@ import { getQueryClient } from '@/pkg/libraries/rest-api/service'
 
 // generate static params
 export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }))
+  return routing.locales.map((locale) => ({ locale: locale }))
 }
 
 // interface
-interface IProps {}
+interface IProps {
+  searchParams: Promise<{ [key: string]: string | undefined }>
+}
 
 // component
-const Page: FC<Readonly<IProps>> = async () => {
+const Page: FC<Readonly<IProps>> = async (props) => {
+  const searchParams = await props.searchParams
+  const order = searchParams.order ?? ''
+
   const clientQuery = getQueryClient()
 
   await Promise.all([clientQuery.prefetchQuery(productsQueryOptions()), clientQuery.prefetchQuery(orderQueryOptions())])
@@ -24,7 +29,7 @@ const Page: FC<Readonly<IProps>> = async () => {
   // return
   return (
     <HydrationBoundary state={dehydrate(clientQuery)}>
-      <HomeModule />
+      <HomeModule order={order} />
     </HydrationBoundary>
   )
 }

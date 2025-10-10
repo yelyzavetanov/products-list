@@ -4,16 +4,20 @@ import { ListBlockComponent, OrderBlockComponent } from '@/app/features/block'
 import { ContainerComponent } from '@/app/shared/ui/container'
 
 // interface
-interface IProps {}
+interface IProps {
+  order: string
+}
 
 // component
-const HomeModule: FC<Readonly<IProps>> = async () => {
+const HomeModule: FC<Readonly<IProps>> = async (props) => {
+  const { order } = props
+
   // return
   return (
     <ContainerComponent>
-      <OrderBlockComponent />
+      <OrderBlockComponent order={order} />
 
-      <ListBlockComponent />
+      <ListBlockComponent order={order} />
     </ContainerComponent>
   )
 }

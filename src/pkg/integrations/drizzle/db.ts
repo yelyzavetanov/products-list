@@ -5,10 +5,8 @@ import { envServer } from '@/config/env'
 
 import * as schema from './schemas/order.schema'
 
-const connectionString = envServer.SUPABASE_URL!
-
 // db client
-const client = postgres(connectionString, {
+const client = postgres(envServer.DATABASE_URL!, {
   max: 5,
   ssl: 'require',
 })

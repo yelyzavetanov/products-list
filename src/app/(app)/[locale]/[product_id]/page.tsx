@@ -34,7 +34,7 @@ export async function generateStaticParams() {
 const Page: FC<Readonly<IProps>> = async (props) => {
   const { product_id } = await props.params
 
-  const isWelcomeEnabled = await getFeatureValue<boolean>('welcome-message', false, { productId: product_id })
+  const isWelcomeEnabled = await getFeatureValue<boolean>('welcome-message', false, {})
 
   const clientQuery = getQueryClient()
   const productData = await clientQuery.fetchQuery(productByIdQueryOptions({ id: product_id }))
