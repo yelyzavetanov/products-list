@@ -1,11 +1,9 @@
 'use client'
 
-import mixpanel from 'mixpanel-browser'
+import { mixpanelManager } from './mixpanel.manager'
 
 export const mixpanelUtils = {
   trackResetSort: () => {
-    if (mixpanel.track) {
-      mixpanel.track('Reset Sort')
-    }
+    mixpanelManager.track('Reset Sort')
   },
 }

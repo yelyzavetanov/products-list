@@ -4,7 +4,7 @@ import { heroui } from '@heroui/react'
 
 // tailwind config
 const config: Config = {
-  content: ['./src/**/*.{js,ts,jsx,tsx}', './src/*.html', './node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}'],
+  content: ['./src/**/*.{js,ts,jsx,tsx}', './node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}'],
   theme: {
     screens: { sm: '768px', md: '1024px', lg: '1360px' },
   },

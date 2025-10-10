@@ -1,5 +1,7 @@
 import { defineConfig, devices } from '@playwright/test'
 
+import { envClient } from '@/config/env'
+
 // playwright config
 export default defineConfig({
   testDir: './tests',
@@ -10,7 +12,7 @@ export default defineConfig({
   reporter: [['html', { outputFolder: './tests/html-report' }]],
   outputDir: './tests/results/',
   use: {
-    baseURL: 'http://localhost:3000',
+    baseURL: envClient.NEXT_PUBLIC_CLIENT_WEB_URL,
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
   },

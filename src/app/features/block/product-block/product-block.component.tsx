@@ -8,11 +8,12 @@ import { IProduct } from '@/app/entities/models'
 // interface
 interface IProps {
   product: IProduct
+  isWelcomeEnabled: boolean
 }
 
 // component
 const ProductBlockComponent: FC<Readonly<IProps>> = (props) => {
-  const { product } = props
+  const { product, isWelcomeEnabled } = props
 
   // return
   return (
@@ -29,8 +30,8 @@ const ProductBlockComponent: FC<Readonly<IProps>> = (props) => {
 
           <div className='flex-1 space-y-6'>
             <div>
+              {isWelcomeEnabled && <div className='text-primary text-sm'>Welcome to product page!</div>}
               <h1 className='mb-2 text-3xl font-bold'>{product.title}</h1>
-
               <p className='text-lg font-semibold text-gray-600 uppercase'>{product.category}</p>
             </div>
 

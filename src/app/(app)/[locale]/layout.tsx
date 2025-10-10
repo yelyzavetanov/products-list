@@ -1,14 +1,12 @@
 import { Metadata } from 'next'
-import { hasLocale, Locale, NextIntlClientProvider } from 'next-intl'
+import { Locale, NextIntlClientProvider } from 'next-intl'
 import { setRequestLocale } from 'next-intl/server'
-import { notFound } from 'next/navigation'
 import { FC, ReactNode } from 'react'
 
 import { LayoutModule } from '@/app/modules/layout'
-import { GrowthBookProvider } from '@/pkg/integrations/growthbook'
+import { envClient } from '@/config/env'
 import { MixpanelProvider } from '@/pkg/integrations/mixpanel'
 import { SentryProvider } from '@/pkg/integrations/sentry'
-import { routing } from '@/pkg/libraries/locale'
 import { RestApiProvider } from '@/pkg/libraries/rest-api'
 import { UiProvider } from '@/pkg/libraries/ui'
 
@@ -24,7 +22,7 @@ interface IProps {
 export const generateMetadata = async (_props?: IProps): Promise<Metadata> => {
   const title = 'Products List'
   const description = 'Products List'
-  const baseUrl = 'http://localhost:3000'
+  const baseUrl = envClient.NEXT_PUBLIC_CLIENT_WEB_URL
 
   return {
     metadataBase: new URL(baseUrl),
@@ -52,9 +50,6 @@ const RootLayout: FC<Readonly<IProps>> = async (props) => {
   const { children, params } = props
 
   const { locale } = await params
-  if (!hasLocale(routing.locales, locale)) {
-    notFound()
-  }
 
   setRequestLocale(locale)
 
@@ -64,15 +59,13 @@ const RootLayout: FC<Readonly<IProps>> = async (props) => {
       <body>
         <SentryProvider>
           <MixpanelProvider>
-            <GrowthBookProvider>
-              <NextIntlClientProvider>
-                <UiProvider>
-                  <RestApiProvider>
-                    <LayoutModule>{children}</LayoutModule>
-                  </RestApiProvider>
-                </UiProvider>
-              </NextIntlClientProvider>
-            </GrowthBookProvider>
+            <NextIntlClientProvider>
+              <UiProvider>
+                <RestApiProvider>
+                  <LayoutModule>{children}</LayoutModule>
+                </RestApiProvider>
+              </UiProvider>
+            </NextIntlClientProvider>
           </MixpanelProvider>
         </SentryProvider>
       </body>
