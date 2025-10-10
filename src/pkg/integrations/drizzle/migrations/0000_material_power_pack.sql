@@ -3,6 +3,6 @@ CREATE SCHEMA "business";
 CREATE SCHEMA "content";
 --> statement-breakpoint
 CREATE TABLE "business"."order_options" (
-	"id" text PRIMARY KEY NOT NULL,
+	"id" text PRIMARY KEY,
 	"option" text
 );

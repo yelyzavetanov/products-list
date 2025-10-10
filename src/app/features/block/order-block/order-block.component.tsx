@@ -1,6 +1,7 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
+import { useSearchParams } from 'next/navigation'
 import { FC } from 'react'
 import { Controller, useForm } from 'react-hook-form'
 
@@ -11,30 +12,37 @@ import { useQuery } from '@tanstack/react-query'
 
 import { orderQueryOptions } from '@/app/entities/api'
 import { IOrder, IOrderSelect } from '@/app/entities/models'
-import { useOrderStore } from '@/app/shared/store'
 import { mixpanelUtils } from '@/pkg/integrations/mixpanel'
+import { useRouter } from '@/pkg/libraries/locale'
 
 // interface
-interface IProps {}
+interface IProps {
+  order: string
+}
 
 // component
-const OrderBlockComponent: FC<Readonly<IProps>> = () => {
+const OrderBlockComponent: FC<Readonly<IProps>> = (props) => {
+  const { order } = props
+
   const { data } = useQuery(orderQueryOptions())
+  console.log(data)
 
   const t = useTranslations()
 
-  const selectedOrder = useOrderStore((s) => s.selectedOrder)
-  const handleOrderStore = useOrderStore((s) => s.handleOrderStore)
+  const router = useRouter()
+  const searchParams = useSearchParams()
 
-  const { control, handleSubmit, reset } = useForm<IOrderSelect>({
+  const { control, handleSubmit } = useForm<IOrderSelect>({
     defaultValues: {
-      order: selectedOrder ?? '',
+      order: order ?? '',
     },
   })
 
   const handleSubmitOrder = (data: IOrderSelect) => {
     try {
-      handleOrderStore({ selectedOrder: data.order })
+      const params = new URLSearchParams(searchParams)
+      params.set('order', data.order)
+      router.push(`?${params.toString()}`)
     } catch (err) {
       withScope((scope) => {
         scope.setTag('component', 'OrderBlockComponent')
@@ -43,6 +51,13 @@ const OrderBlockComponent: FC<Readonly<IProps>> = () => {
         captureException(err)
       })
     }
+  }
+
+  const handleReset = () => {
+    const params = new URLSearchParams(searchParams)
+    params.set('order', 'Direct')
+    router.push(`?${params.toString()}`)
+    mixpanelUtils.trackResetSort()
   }
 
   // return
@@ -90,11 +105,7 @@ const OrderBlockComponent: FC<Readonly<IProps>> = () => {
         color='primary'
         variant='bordered'
         type='button'
-        onPress={() => {
-          handleOrderStore({ selectedOrder: 'Direct' })
-          reset({ order: 'Direct' })
-          mixpanelUtils.trackResetSort()
-        }}
+        onPress={handleReset}
       >
         {t('reset_products_sort_button')}
       </Button>
