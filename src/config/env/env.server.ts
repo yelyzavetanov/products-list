@@ -12,6 +12,7 @@ export const envServer = createEnv({
     SUPABASE_ANON_KEY: z.string().min(1, { message: 'SUPABASE_ANON_KEY is required' }),
     SUPABASE_SERVICE_ROLE_KEY: z.string().min(1, { message: 'SUPABASE_SERVICE_ROLE_KEY is required' }),
     SUPABASE_ACCESS_TOKEN: z.string().min(1, { message: 'SUPABASE_ACCESS_TOKEN is required' }),
+    DATABASE_URL: z.string().min(1, { message: 'DATABASE_URL is required' }),
   },
   emptyStringAsUndefined: true,
   runtimeEnv: {
@@ -22,5 +23,6 @@ export const envServer = createEnv({
     SUPABASE_ANON_KEY: process.env.SUPABASE_ANON_KEY,
     SUPABASE_SERVICE_ROLE_KEY: process.env.SUPABASE_SERVICE_ROLE_KEY,
     SUPABASE_ACCESS_TOKEN: process.env.SUPABASE_ACCESS_TOKEN,
+    DATABASE_URL: process.env.DATABASE_URL,
   },
 })

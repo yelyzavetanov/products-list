@@ -1,2 +1,3 @@
 export { db } from './db'
-export { orderOptions } from './schema'
+export * from './schemas'
+export { orderOptions } from './schemas/order.schema'

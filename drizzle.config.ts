@@ -4,10 +4,10 @@ import { envServer } from '@/config/env'
 
 // config
 export default defineConfig({
-  out: './drizzle',
-  schema: './src/pkg/integrations/drizzle/schema.ts',
+  schema: './src/pkg/integrations/drizzle/schemas/order.schema.ts',
+  out: './src/pkg/integrations/drizzle/migrations',
   dialect: 'postgresql',
   dbCredentials: {
-    url: envServer.SUPABASE_URL!,
+    url: envServer.DATABASE_URL!,
   },
 })
