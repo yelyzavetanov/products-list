@@ -26,6 +26,7 @@ const OrderBlockComponent: FC<Readonly<IProps>> = (props) => {
   const { order } = props
 
   const { data } = useQuery(orderQueryOptions())
+  console.log(data)
 
   const t = useTranslations()
 

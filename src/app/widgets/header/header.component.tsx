@@ -29,17 +29,20 @@ const HeaderComponent: FC<Readonly<IProps>> = () => {
       <Navbar>
         <div className='text-gray-600'>{t('header_title')}</div>
 
-        <div>
+        <div className='flex items-center gap-4'>
           <Link href={'/'} locale={locale}>
             {t('header_link')}
           </Link>
+          <Link href={'/my_iq'} locale={locale}>
+            My IQ
+          </Link>
           {locale === 'en' && (
-            <Button color='primary' size='sm' variant='bordered' onPress={() => switchLocale('uk')} className='mx-4'>
+            <Button color='primary' size='sm' variant='bordered' onPress={() => switchLocale('uk')}>
               EN
             </Button>
           )}
           {locale === 'uk' && (
-            <Button color='primary' size='sm' variant='bordered' onPress={() => switchLocale('en')} className='mx-4'>
+            <Button color='primary' size='sm' variant='bordered' onPress={() => switchLocale('en')}>
               УКР
             </Button>
           )}
