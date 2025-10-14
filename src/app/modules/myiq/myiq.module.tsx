@@ -1,6 +1,8 @@
 import { FC } from 'react'
 
 import { HeroBlockComponent } from '@/app/features/myiq-block/hero-block'
+import { HowItWorksComponent } from '@/app/features/myiq-block/how-it-works-block'
+import { TestBlockComponent } from '@/app/features/myiq-block/test-block'
 import { ContainerComponent } from '@/app/shared/ui/container'
 
 // interface
@@ -9,12 +11,12 @@ interface IProps {}
 const MyIQModule: FC<Readonly<IProps>> = () => {
   // return
   return (
-    <ContainerComponent>
+    <ContainerComponent className='mx-auto w-full max-w-7xl pt-16 max-[1320px]:px-6 max-md:px-4'>
       <HeroBlockComponent />
 
-      <div>how-it-works-block</div>
+      <HowItWorksComponent />
 
-      <div>tests-block</div>
+      <TestBlockComponent />
 
       <div>boost-block</div>
 

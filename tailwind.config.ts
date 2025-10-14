@@ -8,8 +8,13 @@ const config: Config = {
   theme: {
     screens: { sm: '768px', md: '1024px', lg: '1360px' },
     extend: {
+      layout: {
+        borderColor: 'white',
+      },
       colors: {
         secondary: '#0d766e',
+        default: 'transparent',
+        gray: '#454f69',
       },
     },
   },
@@ -18,7 +23,7 @@ const config: Config = {
     heroui({
       layout: {
         fontSize: {
-          small: '0.875rem',
+          large: '28px',
         },
       },
     }),

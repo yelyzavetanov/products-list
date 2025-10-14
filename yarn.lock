@@ -629,6 +629,17 @@
     "@react-aria/focus" "3.21.1"
     "@react-aria/interactions" "3.25.5"
 
+"@heroui/avatar@^2.2.22":
+  version "2.2.22"
+  resolved "https://registry.yarnpkg.com/@heroui/avatar/-/avatar-2.2.22.tgz#1b3b592c0c9deceb811acbf33b5ab778cc601060"
+  integrity sha512-znmKdsrVj91Fg8+wm/HA/b8zi3iAg5g3MezliBfS2PmwgZcpBR6VtwgeeP6uN49+TR+faGIrck0Zxceuw4U0FQ==
+  dependencies:
+    "@heroui/react-utils" "2.1.14"
+    "@heroui/shared-utils" "2.1.12"
+    "@heroui/use-image" "2.1.13"
+    "@react-aria/focus" "3.21.2"
+    "@react-aria/interactions" "3.25.6"
+
 "@heroui/badge@2.2.16":
   version "2.2.16"
   resolved "https://registry.yarnpkg.com/@heroui/badge/-/badge-2.2.16.tgz#91fc76d7c13837a2de28b795bcbeed66e68e7c8d"
@@ -1067,6 +1078,14 @@
     "@heroui/react-rsc-utils" "2.1.9"
     "@heroui/shared-utils" "2.1.11"
 
+"@heroui/react-utils@2.1.14":
+  version "2.1.14"
+  resolved "https://registry.yarnpkg.com/@heroui/react-utils/-/react-utils-2.1.14.tgz#33125a6537bf2f559ea9ed76e8b62c48cc37c3c7"
+  integrity sha512-hhKklYKy9sRH52C9A8P0jWQ79W4MkIvOnKBIuxEMHhigjfracy0o0lMnAUdEsJni4oZKVJYqNGdQl+UVgcmeDA==
+  dependencies:
+    "@heroui/react-rsc-utils" "2.1.9"
+    "@heroui/shared-utils" "2.1.12"
+
 "@heroui/react@^2.8.1":
   version "2.8.4"
   resolved "https://registry.yarnpkg.com/@heroui/react/-/react-2.8.4.tgz#58729133ab9688ec92da5681b9f27506375d1403"
@@ -1174,6 +1193,11 @@
   version "2.1.11"
   resolved "https://registry.yarnpkg.com/@heroui/shared-utils/-/shared-utils-2.1.11.tgz#0aedf0142c829ec4a41a47d827581ee503af2a87"
   integrity sha512-2zKVjCc9EMMk05peVpI1Q+vFf+dzqyVdf1DBCJ2SNQEUF7E+sRe1FvhHvPoye3TIFD/Fr6b3kZ6vzjxL9GxB6A==
+
+"@heroui/shared-utils@2.1.12":
+  version "2.1.12"
+  resolved "https://registry.yarnpkg.com/@heroui/shared-utils/-/shared-utils-2.1.12.tgz#2b0c654797985e8f66bfb7c00f5227ee05bf9ffb"
+  integrity sha512-0iCnxVAkIPtrHQo26Qa5g0UTqMTpugTbClNOrEPsrQuyRAq7Syux998cPwGlneTfB5E5xcU3LiEdA9GUyeK2cQ==
 
 "@heroui/skeleton@2.2.16":
   version "2.2.16"
@@ -1462,6 +1486,14 @@
   integrity sha512-/W6Cu5VN6LcZzYgkxJSvCEjM5gy0OE6NtRRImUDYCbUFNS1gK/apmOnIWcNbKryAg5Scpdoeu+g1lKKP15nSOw==
   dependencies:
     "@heroui/react-utils" "2.1.13"
+    "@heroui/use-safe-layout-effect" "2.1.8"
+
+"@heroui/use-image@2.1.13":
+  version "2.1.13"
+  resolved "https://registry.yarnpkg.com/@heroui/use-image/-/use-image-2.1.13.tgz#d5e733a0f673348597306c7d78c3b06bdd0115fa"
+  integrity sha512-NLApz+xin2bKHEXr+eSrtB0lN8geKP5VOea5QGbOCiHq4DBXu4QctpRkSfCHGIQzWdBVaLPoV+5wd0lR2S2Egg==
+  dependencies:
+    "@heroui/react-utils" "2.1.14"
     "@heroui/use-safe-layout-effect" "2.1.8"
 
 "@heroui/use-intersection-observer@2.2.14":
@@ -2299,6 +2331,17 @@
     "@swc/helpers" "^0.5.0"
     clsx "^2.0.0"
 
+"@react-aria/focus@3.21.2":
+  version "3.21.2"
+  resolved "https://registry.yarnpkg.com/@react-aria/focus/-/focus-3.21.2.tgz#3ce90450c3ee69f11c0647b4717c26d10941231c"
+  integrity sha512-JWaCR7wJVggj+ldmM/cb/DXFg47CXR55lznJhZBh4XVqJjMKwaOOqpT5vNN7kpC1wUpXicGNuDnJDN1S/+6dhQ==
+  dependencies:
+    "@react-aria/interactions" "^3.25.6"
+    "@react-aria/utils" "^3.31.0"
+    "@react-types/shared" "^3.32.1"
+    "@swc/helpers" "^0.5.0"
+    clsx "^2.0.0"
+
 "@react-aria/form@3.1.1", "@react-aria/form@^3.1.1":
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/@react-aria/form/-/form-3.1.1.tgz#76b3eb4a6985fb27b1d437db89b5a69c54be292f"
@@ -2352,6 +2395,17 @@
     "@react-aria/utils" "^3.30.1"
     "@react-stately/flags" "^3.1.2"
     "@react-types/shared" "^3.32.0"
+    "@swc/helpers" "^0.5.0"
+
+"@react-aria/interactions@3.25.6", "@react-aria/interactions@^3.25.6":
+  version "3.25.6"
+  resolved "https://registry.yarnpkg.com/@react-aria/interactions/-/interactions-3.25.6.tgz#6fdf287337c5e4285045c35cf94b2ec8ae3b3a49"
+  integrity sha512-5UgwZmohpixwNMVkMvn9K1ceJe6TzlRlAfuYoQDUuOkk62/JVJNDLAPKIf5YMRc7d2B0rmfgaZLMtbREb0Zvkw==
+  dependencies:
+    "@react-aria/ssr" "^3.9.10"
+    "@react-aria/utils" "^3.31.0"
+    "@react-stately/flags" "^3.1.2"
+    "@react-types/shared" "^3.32.1"
     "@swc/helpers" "^0.5.0"
 
 "@react-aria/label@3.7.21", "@react-aria/label@^3.7.21":
@@ -2690,6 +2744,18 @@
     "@react-stately/flags" "^3.1.2"
     "@react-stately/utils" "^3.10.8"
     "@react-types/shared" "^3.32.0"
+    "@swc/helpers" "^0.5.0"
+    clsx "^2.0.0"
+
+"@react-aria/utils@^3.31.0":
+  version "3.31.0"
+  resolved "https://registry.yarnpkg.com/@react-aria/utils/-/utils-3.31.0.tgz#4710e35bf658234cf4b53eec9742f25e51637b12"
+  integrity sha512-ABOzCsZrWzf78ysswmguJbx3McQUja7yeGj6/vZo4JVsZNlxAN+E9rs381ExBRI0KzVo6iBTeX5De8eMZPJXig==
+  dependencies:
+    "@react-aria/ssr" "^3.9.10"
+    "@react-stately/flags" "^3.1.2"
+    "@react-stately/utils" "^3.10.8"
+    "@react-types/shared" "^3.32.1"
     "@swc/helpers" "^0.5.0"
     clsx "^2.0.0"
 
@@ -3088,6 +3154,11 @@
   version "3.32.0"
   resolved "https://registry.yarnpkg.com/@react-types/shared/-/shared-3.32.0.tgz#6c105ef05e1bd84ab04531e707074dc2a0b3ce07"
   integrity sha512-t+cligIJsZYFMSPFMvsJMjzlzde06tZMOIOFa1OV5Z0BcMowrb2g4mB57j/9nP28iJIRYn10xCniQts+qadrqQ==
+
+"@react-types/shared@^3.32.1":
+  version "3.32.1"
+  resolved "https://registry.yarnpkg.com/@react-types/shared/-/shared-3.32.1.tgz#abfeb839d65d0abe923576f34ac08342c25dfa55"
+  integrity sha512-famxyD5emrGGpFuUlgOP6fVW2h/ZaF405G5KDi3zPHzyjAWys/8W6NAVJtNbkCkhedmvL0xOhvt8feGXyXaw5w==
 
 "@react-types/slider@^3.8.1":
   version "3.8.1"
