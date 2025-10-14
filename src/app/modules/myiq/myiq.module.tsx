@@ -1,8 +1,10 @@
 import { FC } from 'react'
 
 import { BoostBlockComponent } from '@/app/features/myiq-block/boost-block'
+import { CommunityBlockComponent } from '@/app/features/myiq-block/community-block'
 import { HeroBlockComponent } from '@/app/features/myiq-block/hero-block'
 import { HowItWorksComponent } from '@/app/features/myiq-block/how-it-works-block'
+import { ProfitBlockComponent } from '@/app/features/myiq-block/profit-block'
 import { TestBlockComponent } from '@/app/features/myiq-block/test-block'
 import { ContainerComponent } from '@/app/shared/ui/container'
 
@@ -12,7 +14,7 @@ interface IProps {}
 const MyIQModule: FC<Readonly<IProps>> = () => {
   // return
   return (
-    <ContainerComponent className='mx-auto w-full pt-1'>
+    <ContainerComponent className='mx-auto w-full gap-0 pt-1'>
       <HeroBlockComponent />
 
       <HowItWorksComponent />
@@ -21,9 +23,9 @@ const MyIQModule: FC<Readonly<IProps>> = () => {
 
       <BoostBlockComponent />
 
-      <div>profit-block</div>
+      <ProfitBlockComponent />
 
-      <div>community-block</div>
+      <CommunityBlockComponent />
 
       <div>plans-block</div>
 

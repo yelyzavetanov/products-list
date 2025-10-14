@@ -1,12 +1,13 @@
 import { FC } from 'react'
 
-import { CardComponent } from '@/app/shared/ui/card'
+import { BasicCardComponent } from '@/app/shared/ui/card/basic-card'
 
 import { TestCards } from './test-block.constants'
 
 // interface
 interface IProps {}
 
+// component
 const TestBlockComponent: FC<Readonly<IProps>> = () => {
   // return
   return (
@@ -20,7 +21,7 @@ const TestBlockComponent: FC<Readonly<IProps>> = () => {
 
         <div className='grid grid-rows-4 gap-4 pt-6 max-lg:grid-cols-2 max-lg:grid-rows-2 max-md:grid-cols-1 md:gap-6 md:pt-8 lg:grid-cols-4 lg:grid-rows-1'>
           {TestCards.map((card, index) => (
-            <CardComponent
+            <BasicCardComponent
               key={index}
               title={card.title}
               icon={card.icon}

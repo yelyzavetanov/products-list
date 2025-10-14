@@ -18,7 +18,8 @@ interface IProps {
   className?: string
 }
 
-const CardComponent: FC<Readonly<IProps>> = (props) => {
+// component
+const BasicCardComponent: FC<Readonly<IProps>> = (props) => {
   const { icon, number, title, description, list, time, questions, buttonText, buttonDisabled, className } = props
 
   // return
@@ -80,4 +81,4 @@ const CardComponent: FC<Readonly<IProps>> = (props) => {
   )
 }
 
-export default CardComponent
+export default BasicCardComponent

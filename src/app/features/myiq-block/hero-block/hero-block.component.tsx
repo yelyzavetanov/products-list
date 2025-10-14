@@ -10,6 +10,7 @@ import { StarIconComponent } from '@/app/shared/ui/star-icon'
 // interface
 interface IProps {}
 
+// component
 const HeroBlockComponent: FC<Readonly<IProps>> = () => {
   // return
   return (

@@ -1,12 +1,13 @@
 import { FC } from 'react'
 
-import { CardComponent } from '@/app/shared/ui/card'
+import { BasicCardComponent } from '@/app/shared/ui/card/basic-card'
 
 import { howItWorksCards } from './how-it-works-block.constarnts'
 
 // interface
 interface IProps {}
 
+// component
 const HowItWorksComponent: FC<Readonly<IProps>> = () => {
   // return
   return (
@@ -15,7 +16,7 @@ const HowItWorksComponent: FC<Readonly<IProps>> = () => {
 
       <div className='flex w-full gap-3 pt-6 max-md:flex-col md:gap-6 md:pt-8'>
         {howItWorksCards.map((card, index) => (
-          <CardComponent
+          <BasicCardComponent
             key={index}
             icon={card.icon}
             title={card.title}
