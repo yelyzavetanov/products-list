@@ -6,9 +6,11 @@ import { Image } from '@heroui/image'
 
 // interface
 interface IProps {
-  icon: string
   title: string
+  icon?: string
+  number?: number
   description?: string
+  list?: string[]
   time?: string
   questions?: number
   buttonText?: string
@@ -17,14 +19,39 @@ interface IProps {
 }
 
 const CardComponent: FC<Readonly<IProps>> = (props) => {
-  const { icon, title, description, time, questions, buttonText, buttonDisabled, className } = props
+  const { icon, number, title, description, list, time, questions, buttonText, buttonDisabled, className } = props
 
   // return
   return (
     <Card className={`flex flex-1 flex-col items-start gap-3 border-1 p-4 shadow-none ${className}`}>
-      <Image height={38} width={38} src={icon} alt='Card Icon' className='rounded-xs' />
+      {icon && <Image height={38} width={38} src={icon} alt='Card Icon' className='rounded-xs' />}
+
+      {number && (
+        <div className='h-[42px] w-[42px] rounded-full bg-gradient-to-r from-[#007AFF] to-[#7CB7F8] p-[3px]'>
+          <div className='flex h-full w-full items-center justify-center rounded-full bg-white text-[20px] font-semibold text-[#2B2D42]'>
+            {number}
+          </div>
+        </div>
+      )}
 
       <div className='text-start text-lg font-semibold text-[#2C3345]'>{title}</div>
+
+      {list && (
+        <div className='text-normal flex flex-col gap-2'>
+          {list.map((item, index) => (
+            <div className='flex items-stretch gap-1.5' key={index}>
+              <Image
+                src='/icons/check.svg'
+                alt='Check icon'
+                height={22}
+                width={24}
+                className='text-primary flex-1 rounded-xs p-1'
+              />
+              <p className='text-small flex-1'>{item}</p>
+            </div>
+          ))}
+        </div>
+      )}
 
       {description && <div className='text-sm'>{description}</div>}
 
