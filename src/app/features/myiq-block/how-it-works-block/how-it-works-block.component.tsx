@@ -2,7 +2,7 @@ import { FC } from 'react'
 
 import { BasicCardComponent } from '@/app/shared/ui/card/basic-card'
 
-import { howItWorksCards } from './how-it-works-block.constarnts'
+import { howItWorksCards } from './how-it-works-block.constants'
 
 // interface
 interface IProps {}

@@ -10,8 +10,9 @@
   },
   "dependencies": {
     "@growthbook/growthbook": "^1.6.1",
+    "@heroui/accordion": "^2.2.24",
     "@heroui/avatar": "^2.2.22",
-    "@heroui/react": "^2.8.1",
+    "@heroui/react": "^2.8.5",
     "@heroui/select": "^2.4.27",
     "@sentry/nextjs": "^10",
     "@supabase/supabase-js": "^2.58.0",
