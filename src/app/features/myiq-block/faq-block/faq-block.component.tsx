@@ -19,8 +19,11 @@ const FAQBlockComponent: FC<Readonly<IProps>> = () => {
 
         <Accordion selectionMode='multiple'>
           {questions.map((item, index) => (
-            <AccordionItem key={index} title={item.question}>
-              {item.answer}
+            <AccordionItem
+              key={index}
+              title={<span className='text-medium font-medium text-[#2B2D42] md:text-lg'>{item.question}</span>}
+            >
+              <span className='text-medium text-[#2B2D42] transition-transform'>{item.answer}</span>
             </AccordionItem>
           ))}
         </Accordion>

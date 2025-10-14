@@ -7,6 +7,7 @@ import { HeroBlockComponent } from '@/app/features/myiq-block/hero-block'
 import { HowItWorksComponent } from '@/app/features/myiq-block/how-it-works-block'
 import { PlansBlockComponent } from '@/app/features/myiq-block/plans-block'
 import { ProfitBlockComponent } from '@/app/features/myiq-block/profit-block'
+import { ResultsBlockComponent } from '@/app/features/myiq-block/results-block'
 import { TestBlockComponent } from '@/app/features/myiq-block/test-block'
 import { ContainerComponent } from '@/app/shared/ui/container'
 
@@ -33,7 +34,7 @@ const MyIQModule: FC<Readonly<IProps>> = () => {
 
       <FAQBlockComponent />
 
-      <div>results-block</div>
+      <ResultsBlockComponent />
     </ContainerComponent>
   )
 }
