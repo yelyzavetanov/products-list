@@ -10,6 +10,20 @@ const config: Config = {
     extend: {
       layout: {
         borderColor: 'white',
+        fontSize: {
+          large: '28px',
+        },
+        disabledOpacity: '0.3',
+        radius: {
+          small: '2px',
+          medium: '4px',
+          large: '6px',
+        },
+        borderWidth: {
+          small: '0.5px',
+          medium: '1px',
+          large: '2px',
+        },
       },
       colors: {
         secondary: '#0d766e',
@@ -20,15 +34,7 @@ const config: Config = {
     },
   },
   darkMode: 'class',
-  plugins: [
-    heroui({
-      layout: {
-        fontSize: {
-          large: '28px',
-        },
-      },
-    }),
-  ],
+  plugins: [heroui()],
 }
 
 export default config

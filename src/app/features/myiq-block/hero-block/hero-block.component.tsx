@@ -29,7 +29,7 @@ const HeroBlockComponent: FC<Readonly<IProps>> = () => {
             </span>
           </h1>
 
-          <p className='text-base leading-[25px] text-[#2B2D42] lg:max-w-[325px] lg:text-[18px]'>
+          <p className='text-base leading-[25px] lg:max-w-[325px] lg:text-[18px]'>
             Take our IQ test and unlock your path to self-discovery and development
           </p>
 
