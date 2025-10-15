@@ -27,7 +27,7 @@ export const resultCards = [
   {
     flag: `data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3e%3cpath fill='%23007A5E' d='M0 0h3v2H0z'/%3e%3cpath fill='%23FFD100' d='M0 0h3v1H0z'/%3e%3c/svg%3e`,
     name: 'Stanescu Vlad',
-    iq: '',
+    iq: '87',
   },
   {
     flag: `data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3e%3cpath fill='%23F00' d='M0 0h3v1H0z'/%3e%3cpath fill='%23FFF' d='M0 1h3v1H0z'/%3e%3c/svg%3e`,
