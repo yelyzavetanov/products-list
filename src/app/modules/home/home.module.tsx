@@ -14,7 +14,7 @@ const HomeModule: FC<Readonly<IProps>> = async (props) => {
 
   // return
   return (
-    <ContainerComponent>
+    <ContainerComponent className='pt-28'>
       <OrderBlockComponent order={order} />
 
       <ListBlockComponent order={order} />

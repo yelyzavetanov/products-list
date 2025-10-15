@@ -15,7 +15,7 @@ const ContainerComponent: FC<Readonly<IProps>> = (props) => {
   // return
   return (
     <>
-      <main className={cn([`flex min-h-[90vh] flex-col items-center gap-4 p-4 ` + className])}>{children}</main>
+      <main className={cn([`flex min-h-[90vh] flex-col items-center gap-4 py-4 ` + className])}>{children}</main>
     </>
   )
 }
