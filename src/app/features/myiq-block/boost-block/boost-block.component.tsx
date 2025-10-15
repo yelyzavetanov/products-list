@@ -11,10 +11,12 @@ interface IProps {}
 const BoostBlockComponent: FC<Readonly<IProps>> = () => {
   // return
   return (
-    <section className='flex w-full max-w-7xl flex-col items-center gap-8 px-4 py-6 md:py-8'>
-      <h3 className='text-large text-dark-custom text-center font-semibold md:text-4xl'>Boost Your Abilities</h3>
+    <section id='boost-block' className='flex w-full max-w-7xl flex-col items-center gap-8 px-4 py-6 md:py-8'>
+      <h3 className='text-large text-dark-custom text-center text-base font-semibold md:text-4xl'>
+        Boost Your Abilities
+      </h3>
 
-      <p className='pt-1.5 text-center text-base text-[#2C3345] md:pt-2.5 md:text-[18px]'>
+      <p className='pt-1.5 text-center text-base md:pt-2.5 md:text-[18px]'>
         Unlock your potential with our comprehensive training package
       </p>
 

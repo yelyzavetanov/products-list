@@ -15,6 +15,7 @@ const config: Config = {
         secondary: '#0d766e',
         default: 'transparent',
         gray: '#454f69',
+        base: '#2c3345',
       },
     },
   },

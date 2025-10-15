@@ -59,7 +59,7 @@ const ListBlockComponent: FC<Readonly<IProps>> = (props) => {
                 </CardBody>
 
                 <CardFooter className='rounded-large absolute bottom-1 z-10 ml-1 hidden w-[calc(100%_-_8px)] justify-between border-2 border-black/10 bg-white/50 py-1 group-hover/card:block before:rounded-xl'>
-                  <h4 className='text-large text-right font-medium'>{product.title}</h4>
+                  <h4 className='text-right text-lg font-medium'>{product.title}</h4>
                 </CardFooter>
               </Card>
             </Link>

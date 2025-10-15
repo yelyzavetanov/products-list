@@ -12,9 +12,9 @@ const PlansBlockComponent: FC<Readonly<IProps>> = () => {
   // return
   return (
     <section className='flex w-full max-w-7xl flex-col items-center px-4 py-6 md:py-8'>
-      <h3 className='text-large text-dark-custom text-center font-semibold md:text-4xl'>Explore our plans</h3>
+      <h3 className='text-large text-dark-custom text-center text-base font-semibold md:text-4xl'>Explore our plans</h3>
 
-      <p className='pt-1.5 text-center text-base text-[#2C3345] md:pt-2.5 md:text-[18px]'>
+      <p className='pt-1.5 text-center text-base md:pt-2.5 md:text-[18px]'>
         Discover our flexible offers and choose the one that best suits your learning and personal development journey
       </p>
 

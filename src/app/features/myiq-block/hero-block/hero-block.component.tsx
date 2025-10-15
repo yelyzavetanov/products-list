@@ -14,7 +14,7 @@ interface IProps {}
 const HeroBlockComponent: FC<Readonly<IProps>> = () => {
   // return
   return (
-    <section className='relative flex w-full justify-center px-4'>
+    <section className='relative mt-16 flex w-full justify-center px-4'>
       <div className='z-0 flex h-full w-full max-w-7xl flex-col-reverse items-center gap-5 pt-14 lg:flex-row lg:justify-between lg:pt-[84px]'>
         <div className='flex w-full max-w-[630px] flex-col gap-3 lg:gap-4'>
           <h1 className='text-[32px] leading-[40px] font-extrabold lg:text-[48px] lg:leading-[62px]'>

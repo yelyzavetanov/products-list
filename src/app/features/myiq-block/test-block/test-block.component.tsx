@@ -13,9 +13,9 @@ const TestBlockComponent: FC<Readonly<IProps>> = () => {
   return (
     <section className='flex w-full justify-center bg-[#F6FBFF] px-4'>
       <div className='max-w-7xl flex-1 items-center gap-8 py-6 md:py-8'>
-        <h3 className='text-large text-dark-custom text-center font-semibold md:text-4xl'>Available Tests</h3>
+        <h3 className='text-large text-dark-custom text-center text-base font-semibold md:text-4xl'>Available Tests</h3>
 
-        <p className='pt-1.5 text-center text-base text-[#2C3345] md:pt-2.5 md:text-[18px]'>
+        <p className='pt-1.5 text-center text-base md:pt-2.5 md:text-[18px]'>
           Each test reveals a new part of you. Start with intelligence, with more tests coming soon
         </p>
 

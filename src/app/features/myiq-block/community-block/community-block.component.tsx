@@ -16,7 +16,7 @@ const CommunityBlockComponent: FC<Readonly<IProps>> = () => {
     <section className='flex w-full justify-center bg-[#F6FBFF] px-4'>
       <div className='flex max-w-7xl flex-1 flex-col items-center justify-between gap-8 px-4 py-6 md:flex-row md:py-8'>
         <div className='flex flex-1 flex-col items-start gap-1'>
-          <h3 className='text-large text-dark-custom text-center font-semibold md:text-4xl'>Community</h3>
+          <h3 className='text-large text-dark-custom text-center text-base font-semibold md:text-4xl'>Community</h3>
 
           <p className='hidden text-[17px] text-[#454F69] lg:inline-block'>
             Follow us on social media for daily quizzes, challenges and brain teasers to keep your mind sharp
