@@ -14,7 +14,7 @@ const CheckCardComponent: FC<Readonly<IProps>> = (props) => {
 
   // return
   return (
-    <Card className='flex flex-1 flex-row justify-between gap-4 rounded-lg border-1 border-[#D9E7FF] p-4 shadow-none md:py-6'>
+    <Card className='flex w-[70%] shrink-0 snap-start flex-row justify-between gap-4 overflow-y-auto rounded-lg border-1 border-[#D9E7FF] p-4 antialiased shadow-none sm:w-[40%] md:w-auto md:flex-1 md:py-6'>
       <Image
         src='/icons/filled-check.svg'
         alt='Questions icon'

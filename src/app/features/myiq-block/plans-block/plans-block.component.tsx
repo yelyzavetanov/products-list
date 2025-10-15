@@ -18,7 +18,7 @@ const PlansBlockComponent: FC<Readonly<IProps>> = () => {
         Discover our flexible offers and choose the one that best suits your learning and personal development journey
       </p>
 
-      <div className='flex gap-4 pt-5'>
+      <div className='flex flex-col justify-center gap-4 pt-5 md:flex-row'>
         {planCards.map((card, index) => (
           <PlanCardComponent key={index} title={card.title} price={card.price} period={card.period} list={card.list} />
         ))}

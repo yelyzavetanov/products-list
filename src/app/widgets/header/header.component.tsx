@@ -33,14 +33,17 @@ const HeaderComponent: FC<Readonly<IProps>> = () => {
           <Link href={'/'} locale={locale}>
             {t('header_link')}
           </Link>
+
           <Link href={'/my_iq'} locale={locale}>
             My IQ
           </Link>
+
           {locale === 'en' && (
             <Button color='primary' size='sm' variant='bordered' onPress={() => switchLocale('uk')}>
               EN
             </Button>
           )}
+
           {locale === 'uk' && (
             <Button color='primary' size='sm' variant='bordered' onPress={() => switchLocale('en')}>
               УКР
