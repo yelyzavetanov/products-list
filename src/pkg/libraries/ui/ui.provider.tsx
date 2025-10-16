@@ -1,7 +1,8 @@
 'use client'
 
-import { HeroUIProvider } from '@heroui/system'
 import { FC, ReactNode } from 'react'
+
+import { HeroUIProvider } from '@heroui/system'
 
 interface IProps {
   children: ReactNode

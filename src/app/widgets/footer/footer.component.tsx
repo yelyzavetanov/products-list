@@ -10,7 +10,7 @@ import { Link } from '@heroui/link'
 
 import { usePathname, useRouter } from '@/pkg/libraries/locale'
 
-import { aboutUsLinks, legalLinks, payLinks, socialLinks } from './footer.constants'
+import { aboutUsLinks, legalLinks, payLinks, socialLinks } from './footer.constant'
 
 // interface
 interface IProps {}

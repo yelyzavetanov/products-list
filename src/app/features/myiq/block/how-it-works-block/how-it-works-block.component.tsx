@@ -1,14 +1,14 @@
 import { FC } from 'react'
 
-import { BasicCardComponent } from '@/app/shared/ui/card/basic-card'
+import { BasicCardComponent } from '@/app/shared/ui/card'
 
-import { howItWorksCards } from './how-it-works-block.constants'
+import { howItWorksCards } from './how-it-works-block.constant'
 
 // interface
 interface IProps {}
 
 // component
-const HowItWorksComponent: FC<Readonly<IProps>> = () => {
+const HowItWorksBlockComponent: FC<Readonly<IProps>> = () => {
   // return
   return (
     <section id='how-it-works' className='pt w-full max-w-7xl px-4 pt-[120px] pb-6 md:pb-10 lg:pt-[174px]'>
@@ -29,4 +29,4 @@ const HowItWorksComponent: FC<Readonly<IProps>> = () => {
   )
 }
 
-export default HowItWorksComponent
+export default HowItWorksBlockComponent

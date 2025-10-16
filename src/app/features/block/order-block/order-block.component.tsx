@@ -103,6 +103,7 @@ const OrderBlockComponent: FC<Readonly<IProps>> = (props) => {
           {t('reset_products_sort_button')}
         </Button>
       </form>
+
       <div className='text-primary mb-5 text-center text-sm'>Sort used {orderCounter} times.</div>
     </div>
   )

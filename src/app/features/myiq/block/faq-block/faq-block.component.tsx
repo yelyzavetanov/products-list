@@ -4,7 +4,7 @@ import { FC } from 'react'
 
 import { Accordion, AccordionItem } from '@heroui/accordion'
 
-import { questions } from './faq-block.constants'
+import { questions } from './faq-block.constant'
 
 // interface
 interface IProps {}

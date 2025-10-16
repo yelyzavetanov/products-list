@@ -4,7 +4,7 @@ import { Button } from '@heroui/button'
 import { Image } from '@heroui/image'
 import { Link } from '@heroui/link'
 
-import { communityLinks } from './community-block.constants'
+import { communityLinks } from './community-block.constant'
 
 // interface
 interface IProps {}

@@ -1,8 +1,8 @@
 import { FC } from 'react'
 
-import { ResultCardComponent } from '@/app/shared/ui/card/result-card'
+import { ResultCardComponent } from '@/app/shared/ui/card'
 
-import { resultCards } from './results-block.constants'
+import { resultCards } from './results-block.constant'
 
 // interface
 interface IProps {}

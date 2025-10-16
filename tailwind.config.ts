@@ -48,6 +48,18 @@ const config: Config = {
           large: '1.75rem',
         },
       },
+      themes: {
+        light: {
+          colors: {
+            primary: {
+              DEFAULT: '#1f75db',
+            },
+            secondary: {
+              DEFAULT: '#0d766e',
+            },
+          },
+        },
+      },
     }),
   ],
 }

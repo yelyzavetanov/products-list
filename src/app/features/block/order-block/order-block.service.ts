@@ -30,6 +30,7 @@ export const handleSubmitOrder = (params: ISubmitOrderParams) => {
   try {
     const urlParams = new URLSearchParams(searchParams)
     urlParams.set('order', data.order)
+
     router.push(`?${urlParams.toString()}`)
 
     handleOrderStore({ orderCounter: orderCounter + 1 })
@@ -50,6 +51,7 @@ export const handleResetOrder = (params: IResetOrderParams) => {
 
   const urlParams = new URLSearchParams(searchParams)
   urlParams.set('order', 'Direct')
+
   router.push(`?${urlParams.toString()}`)
 
   setValue('order', 'Direct')

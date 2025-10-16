@@ -65,6 +65,7 @@ const HeaderComponent: FC<Readonly<IProps>> = () => {
                 className='text-black transition-transform duration-300 hover:rotate-90'
               >
                 <line x1='18' y1='6' x2='6' y2='18' />
+
                 <line x1='6' y1='6' x2='18' y2='18' />
               </svg>
             </div>

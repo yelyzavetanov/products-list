@@ -24,7 +24,10 @@ const Page: FC<Readonly<IProps>> = async (props) => {
 
   const clientQuery = getQueryClient()
 
-  await Promise.all([clientQuery.prefetchQuery(productsQueryOptions()), clientQuery.prefetchQuery(orderQueryOptions())])
+  await Promise.allSettled([
+    clientQuery.prefetchQuery(productsQueryOptions()),
+    clientQuery.prefetchQuery(orderQueryOptions()),
+  ])
 
   // return
   return (
