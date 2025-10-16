@@ -1,8 +1,8 @@
 import { FC } from 'react'
 
-import { BasicCardComponent } from '@/app/shared/ui/card/basic-card'
+import { BasicCardComponent } from '@/app/shared/ui/card'
 
-import { BoostCards } from './boost-block.contants'
+import { BoostCards } from './boost-block.contant'
 
 // interface
 interface IProps {}

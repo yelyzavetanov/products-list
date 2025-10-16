@@ -1,6 +1,7 @@
 import { db } from './db'
 import { orderOptions } from './schemas'
 
+// seed
 async function seed() {
   await db.insert(orderOptions).values([
     { id: '1', option: 'Direct' },

@@ -1,8 +1,8 @@
 import { FC } from 'react'
 
-import { CheckCardComponent } from '@/app/shared/ui/card/check-card'
+import { CheckCardComponent } from '@/app/shared/ui/card'
 
-import { ProfitCards } from './profit-block.constants'
+import { ProfitCards } from './profit-block.constant'
 
 // interface
 interface IProps {}

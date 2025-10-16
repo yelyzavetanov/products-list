@@ -1,8 +1,8 @@
 import { FC } from 'react'
 
-import { PlanCardComponent } from '@/app/shared/ui/card/plan-card'
+import { PlanCardComponent } from '@/app/shared/ui/card'
 
-import { planCards } from './plans-block.constants'
+import { planCards } from './plans-block.constant'
 
 // interface
 interface IProps {}

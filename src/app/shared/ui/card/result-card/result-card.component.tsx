@@ -27,8 +27,10 @@ const ResultCardComponent: FC<Readonly<IProps>> = (props) => {
         width={45}
         className='mt-0 h-5 w-[30px] overflow-hidden rounded lg:h-8 lg:w-[45px]'
       />
+
       <div className='text-base font-medium md:text-lg'>{name}</div>
-      <div className='text-primary ml-auto px-2 py-1 text-center text-base font-semibold md:text-[20px]'>IQ {iq}</div>
+
+      <div className='text-primary ml-auto px-2 py-1 text-center font-semibold md:text-[20px]'>IQ {iq}</div>
     </Card>
   )
 }
