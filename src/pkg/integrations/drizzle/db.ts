@@ -11,4 +11,4 @@ const client = postgres(envServer.DATABASE_URL!, {
   ssl: 'require',
 })
 
-export const db = drizzle(client, { schema })
+export const db = drizzle(client, { schema, logger: true })
