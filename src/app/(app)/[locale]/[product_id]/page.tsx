@@ -2,7 +2,7 @@ import { FC } from 'react'
 
 import { productByIdQueryOptions, productsQueryOptions } from '@/app/entities/api'
 import { ProductModule } from '@/app/modules/product'
-import { getFeatureValue } from '@/pkg/integrations/growthbook/growthbook.adapter'
+import { getFeatureValue } from '@/pkg/integrations/growthbook'
 import { routing } from '@/pkg/libraries/locale'
 import { getQueryClient } from '@/pkg/libraries/rest-api/service'
 
