@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test'
 
-// Order component
+// test
 test.describe('OrderBlockComponent', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/en')

@@ -6312,7 +6312,7 @@ loose-envify@^1.4.0:
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
-lru-cache@^10.2.0:
+lru-cache@^10.0.0, lru-cache@^10.2.0:
   version "10.4.3"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-10.4.3.tgz#410fc8a17b70e598013df257c2446b7f3383f119"
   integrity sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==
@@ -6466,6 +6466,13 @@ next-intl@^4.3.9:
     "@formatjs/intl-localematcher" "^0.5.4"
     negotiator "^1.0.0"
     use-intl "^4.3.9"
+
+next-rate-limit@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/next-rate-limit/-/next-rate-limit-0.0.3.tgz#f38b2ba6f13b77022d299fe2976a30c932d471e4"
+  integrity sha512-2VYgvxs1Mh1u4JGaxGu+dyNHUlpGOniCagZoQcqcTlsQS4OVQ4Dh3SU0mFlG2P1X2VlDN1lrjPpnaybFaGesbQ==
+  dependencies:
+    lru-cache "^10.0.0"
 
 next@15.5.4:
   version "15.5.4"
