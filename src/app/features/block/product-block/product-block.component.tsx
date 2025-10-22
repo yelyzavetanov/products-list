@@ -1,9 +1,13 @@
+'use client'
+
 import { FC } from 'react'
 
+import { Button } from '@heroui/button'
 import { Card } from '@heroui/card'
 import { Image } from '@heroui/image'
 
 import { IProduct } from '@/app/entities/models'
+import { mixpanelUtils } from '@/pkg/integrations/mixpanel'
 
 // interface
 interface IProps {
@@ -52,6 +56,20 @@ const ProductBlockComponent: FC<Readonly<IProps>> = (props) => {
             </div>
 
             <p className='leading-relaxed text-gray-600'>{product.description}</p>
+
+            <Button
+              onPress={() => {
+                mixpanelUtils.trackHelloMessage({
+                  variation: isWelcomeEnabled ? 1 : 0,
+                  experimentKey: 'show-hello-message',
+                  id: product.id.toString(),
+                })
+              }}
+              variant='bordered'
+              className='border-primary border-small'
+            >
+              Buy
+            </Button>
           </div>
         </div>
       </Card>

@@ -36,8 +36,14 @@ const Page: FC<Readonly<IProps>> = async (props) => {
 
   const clientQuery = getQueryClient()
 
+  const attributes = {
+    id: product_id,
+    country: 'UA',
+    locale: 'uk',
+  }
+
   const [isWelcomeEnabled, productData] = await Promise.all([
-    getFeatureValue<boolean>('welcome-message', false, {}),
+    getFeatureValue<boolean>('welcome-message', false, attributes),
     clientQuery.fetchQuery(productByIdQueryOptions({ id: product_id })),
   ])
 

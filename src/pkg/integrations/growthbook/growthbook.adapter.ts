@@ -7,6 +7,9 @@ const gb = new GrowthBook({
   apiHost: envServer.GROWTHBOOK_API_HOST,
   clientKey: envServer.GROWTHBOOK_CLIENT_KEY,
   enableDevMode: process.env.NODE_ENV !== 'production',
+  trackingCallback: (experiment, result) => {
+    console.log('Experiment viewed:', experiment.key, result.variationId)
+  },
 })
 
 let initialized = false
